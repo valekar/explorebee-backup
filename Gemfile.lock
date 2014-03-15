@@ -374,7 +374,7 @@ DEPENDENCIES
   rmagick
   rspec-rails (= 2.13.1)
   rvm-capistrano
-  sass-rails (= 4.0.0)
+  sass-rails (~> 4.0.0)
   sdoc (= 0.3.20)
   searchkick
   selenium-webdriver (= 2.0.0)

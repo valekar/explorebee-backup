@@ -94,7 +94,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="35" selection-start="1610" selection-end="1610" vertical-scroll-proportion="0.003164557" vertical-offset="1078" max-vertical-offset="1800">
+            <state line="90" column="28" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.64082277" vertical-offset="945" max-vertical-offset="1800">
               <folding />
             </state>
           </provider>
@@ -136,7 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/client/controllersJS/ActivityController.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/client/controllersJS/AttachmentsController.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/client/controllersJS/CentreHomeController.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/client/controllersJS/ChatControllerJS.js" />
@@ -187,6 +186,7 @@
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -876,7 +876,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="35" selection-start="1610" selection-end="1610" vertical-scroll-proportion="0.003164557" vertical-offset="1078" max-vertical-offset="1800">
+        <state line="90" column="28" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.64082277" vertical-offset="945" max-vertical-offset="1800">
           <folding />
         </state>
       </provider>
