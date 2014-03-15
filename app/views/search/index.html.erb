@@ -1,0 +1,49 @@
+<div ng-controller="SearchCtrl">
+
+
+
+
+  <div class="row centered panel radius callout">
+
+    <div class="large-5 columns">
+      <% @places.each do |place| %>
+          <div class="subheader">
+            <h4><%= place.name %></h4>
+          </div>
+          <a href="/places/<%=place.id %>">
+              <ul data-orbit>
+                  <% place.place_albums.each do |img| %>
+                    <li class="">
+                         <%=image_tag img.image_url.to_s, class:"th" %>
+                    </li>
+                  <% end %>
+              </ul>
+          </a>
+
+
+          <hr>
+      <% end %>
+
+    <!--  <% @users.each do |user| %>
+          <div class="subheader">
+            <h4><%= user.name %></h4>
+          </div>
+          <a href="/users/<%=user.id %>">
+            <%=image_tag user.image_url.to_s, class:"th" %>
+          </a>
+
+
+          <hr>
+      <% end %>-->
+
+
+      <div class="pagination-centered">
+        <%= will_paginate @places, class:"pagination"%>
+       </div>
+    </div>
+    <div class="large-7 columns"></div>
+
+  </div>
+
+
+</div>

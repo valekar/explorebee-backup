@@ -1,0 +1,108 @@
+<div ng-controller="ActivityCtrl">
+  <!-- <div class="row">
+   <div class="large-8 columns">-->
+  <div infinite-scroll="myPagingFunction()" >
+    <h1>Activities</h1>
+    <noscript>
+      <% @activities.each do |activity| %>
+          <div class="panel">
+            <%= ActivityPresenter.new(activity, self).render_activity %>
+          </div>
+      <% end %>
+      <%= will_paginate %>
+      <</noscript>
+  </div>
+
+
+
+  <div class="row panel callout radius">
+    <!--this is used for showing the microposts-->
+    <div ng-repeat="userDetail in usersDetails" class="row">
+
+      <div class="large-2 columns">
+        <div class="row">
+          <img border="0" ng-src="{{userDetail.otherUserPhoto}}" alt="UserPhoto" width="38" height="50" />
+        </div>
+
+        <div class="row">
+          <button class="button tiny" ng-click="onVote(userDetail,'up')"> <i class="fi-like" ></i></button>
+          <h6 >{{userDetail.vote.reputation}} votes</h6>
+        </div>
+        <div class="row">
+          <button class="button tiny" ng-click="onVote(userDetail,'down')"> <i class="fi-dislike" ></i></button>
+
+        </div>
+      </div>
+      <div class="large-10 columns pull-1">
+
+        <span class="subheader" ng-bind="userDetail.otherUser.name"> said:: </span>
+
+        <!--This is for the micropost contents-->
+        <span class="content" ng-bind="userDetail.feed.content">  </span>
+        <!--This is for the attachments-->
+        <div ng-show="userDetail.feedModel == 'attachments' ">
+            Description :: <span class="description" ng-bind="userDetail.feed.description"></span>
+             <a ng-href = "{{userDetail.feed.file.url}}">Download</a>
+            <span class="subheader" ng-bind="userDetail.feed.created_at|date:'h.mm a'">at  </span>
+        </div>
+         <!--This is for video model-->
+        <div ng-show="userDetail.feedModel == 'video_attachments' ">
+          Description :: <span class="description" ng-bind="userDetail.feed.description"></span>
+
+          <a class="th" flow="" url = "{{userDetail.feed.file.url}}"  style="display:block;width:300px;height:230px;">
+            <img  ng-src="{{userDetail.feed.file.thumb.url}}"  width="300px" height="330px" /></a>
+
+
+          <!--{{userDetail}}-->
+
+          <span class="subheader" ng-bind="userDetail.feed.created_at|date:'h.mm a'">at  </span>
+        </div>
+
+        <hr/>
+
+
+        <!--**********************************-->
+
+
+        <!--this part is for comment -->
+
+
+
+
+            <div ng-repeat="comment in userDetail.comments" class="row">
+              <div class="large-3 columns ">
+                <img border="0" ng-src="{{comment.user_image}}" alt="userPhoto" width="38" height="50"/>
+                  <!--<img border="0" ng-src="{{userDetail.currentUserPhoto}}" alt="userPhoto" width="38" height="50"/>-->
+              </div>
+
+
+              <div class="large-9 columns pull-1">
+
+                <span class="subheader"ng-bind="comment.user_name"> <%#=@user.name%> said:: </span>
+                <span class="content" ng-bind="comment.content"> </span>
+                <span class="subheader"ng-bind="comment.created_at|date:'h.mm a'">at  </span>
+              </div>
+              <hr/>
+            </div>
+
+            <!--Use this to write the comments-->
+            <textarea ng-model="userDetail.commentIt" placeholder="Comment about it"></textarea>
+            <button class="small button" ng-click="comment(userDetail)">Comment</button>
+          </div>
+        <hr/>
+      </div>
+      <!--****************************************************************************************************-->
+
+
+    </div>
+
+
+
+    <!--<div paginationdirective>
+
+    </div>-->
+
+
+  </div>
+</div>
+

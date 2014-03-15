@@ -1,0 +1,103 @@
+
+
+<div class="chat_container">
+  <div id="chat_room">
+    <p class="alert"> Welcome to the chat room <%= @user.name %>! </p>
+  </div>
+
+  <form id="new_message_form">
+    <input type="text" id="message" name="message">
+    <input type="submit" value="Send">
+  </form>
+</div>
+
+
+
+
+
+  <!-- <script>
+        $(function() {
+            // Subscribe to receive messages!
+            var client = new Faye.Client('http://localhost:9292/faye');
+            alert("adasd");
+
+            // Our public subscription
+            PrivatePub.subscribe("/messages/public", function(data) {
+                $("<p>aasd</p>").html(data.username + ":" + data.msg).appendTo('#chat');
+
+            });
+
+            // Our own private channel
+            PrivatePub.subscribe("/messages/private/<%#= @user.name %>", function(data) {
+                $("<p></p>").addClass("private").html(data.username + ": " + data.msg).appendTo('#chat');
+            });
+
+            // Handle form submission to publish messages.
+            $('#new_message_form').submit(function(){
+                // Is it a private message?
+                if (matches = $('#message').val().match(/@(.+) (.+)/)) {
+                    client.publish('/messages/private/' + matches[1], {
+                        username: '<%#= @user.name %>',
+                        msg: matches[2]
+                    });
+                }
+                else {
+                    // It's a public message
+                    client.publish('/messages/public', {
+                        username: '<%#= @user.name %>',
+                        msg: $('#message').val()
+                    });
+                }
+
+                // Clear the message box
+                $('#message').val('');
+
+                return false;
+            });
+        });
+    </script>-->
+
+
+    <script>
+        $(function() {
+            // Subscribe to receive messages!
+            var client = new Faye.Client('http://localhost:9292/faye');
+
+            // Our public subscription
+            var public_subscription = client.subscribe('/messages/public', function(data) {
+                $('<p></p>').html(data.username + ": " + data.msg).appendTo('#chat_room');
+            });
+
+            // Our own private channel
+            var private_subscription = client.subscribe('/messages/private/<%= @user.name %>', function(data) {
+                $('<p></p>').addClass('private').html(data.username + ": " + data.msg).appendTo('#chat_room');
+            });
+
+            // Handle form submission to publish messages.
+            $('#new_message_form').submit(function(){
+                // Is it a private message?
+                if (matches = $('#message').val().match(/@(.+) (.+)/)) {
+                    client.publish('/messages/private/' + matches[1], {
+                        username: '<%= @user.name %>',
+                        msg: matches[2]
+                    });
+                }
+                else {
+                    // It's a public message
+                    client.publish('/messages/public', {
+                        username: '<%= @user.name %>',
+                        msg: $('#message').val()
+                    });
+                }
+
+                // Clear the message box
+                $('#message').val('');
+
+                return false;
+            });
+        });
+    </script>
+
+
+<%#= subscribe_to "/messages/public" %>
+<%#= subscribe_to "/messages/private/#{@user.name}" %>

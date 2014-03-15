@@ -1,0 +1,93 @@
+.fullscreen-img {
+    display:block;z-index:1;
+    min-width:100%;
+    min-height:100%;
+    background:transparent url('/background.jpg') center center no-repeat;
+    background-size:cover;
+}
+
+#masonry-container {
+ /*background: rgba(56, 177, 49, 0.16);*/
+    padding: 5px;
+    margin-bottom: 10px;
+
+
+    border-radius: 5px;
+    clear: both;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+.col1 { width: 80px;position: relative; }
+.col2 { width: 180px;position: relative; }
+.col3 { width: 280px;position: relative; }
+.col4 { width: 380px;position: relative; }
+.col5 { width: 480px;position: relative; }
+.col6 { width: 580px;position: relative; }
+.col7 { width: 680px;position: relative; }
+
+
+.col1 img { max-width: 80px; }
+.col2 img { max-width: 180px; }
+.col3 img { max-width: 280px; }
+.col4 img { max-width: 380px; }
+.col5 img { max-width: 480px; }
+
+.box {
+    background: none repeat scroll #f9fffd;
+    border-radius: 5px;
+    float: left;
+    font-size: 11px;
+    line-height: 1.4em;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+
+.place_header li {
+    display: inline-block;
+}
+
+.masonry_box {
+    background: none repeat scroll 0 0 rgba(48, 70, 222, 0.12);
+    border-radius: 5px;
+    float: left;
+    font-size: 11px;
+    line-height: 1.4em;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+/**** Transitions ****/
+
+.masonry,
+.masonry .masonry-brick {
+    -webkit-transition-duration: 2.7s;
+    -moz-transition-duration: 2.7s;
+    -ms-transition-duration: 2.7s;
+    -o-transition-duration: 2.7s;
+    transition-duration: 2.7s;
+}
+
+.masonry {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    -ms-transition-property: height, width;
+    -o-transition-property: height, width;
+    transition-property: height, width;
+}
+
+.masonry .masonry-brick {
+    -webkit-transition-property: left, right, top;
+    -moz-transition-property: left, right, top;
+    -ms-transition-property: left, right, top;
+    -o-transition-property: left, right, top;
+    transition-property: left, right, top;
+}

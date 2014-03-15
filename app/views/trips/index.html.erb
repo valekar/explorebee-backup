@@ -1,0 +1,67 @@
+<div ng-controller="TripIndexCtrl">
+
+  <div class="large-2 columns">
+             .
+  </div>
+  <div class="large-6 columns">
+
+        <% @mod_trips.each do |mod| %>
+        <div class="large-12 columns panel">
+          <div class="row">
+          <div class="right tiny">
+               <strong>Invitee</strong><br/>
+               <a href="<%=user_path(mod[0].user.id)%>" target="_blank">
+               <%=image_tag image_url mod[0].user.image.small.to_s %><br/>
+               Name::<%= mod[0].user.name %><br/>
+               Ph::<%= mod[0].phone %>
+               </a>
+          </div>
+
+          <div class="left">
+           <strong>When::</strong> <%= mod[0].when_at.strftime("%d-%m-%Y") %>,
+            <strong><%= ((mod[0].when_at - @now)/(60*60*24)).to_i %></strong> day(s) to go<br>
+             <br>
+
+          </div>
+
+            <div trip-join trip-id="<%= mod[0].id%>" trip-acceptance="<%= mod[1] %>" trip-invitee= "<%= mod[2] %>"></div>
+
+
+          </div>
+          <div class="row">
+            <div class="large-10 columns">
+          <table class="tiny">
+              <tr><td><label>Name</label></td><td><%=mod[0].name  %></td></tr>
+              <tr><td><label>Description</label></td><td><%= mod[0].description %></td></tr>
+            <tr><td><label>From </label></td><td><%= mod[0].from_place %></td></tr>
+              <tr><td><label>Destination Places</label></td><td><% mod[0].places.each do |place| %> <a href="<%= place_path(place.id) %>" target="_blank"><%=  place.name %></a>  <% end %></td></tr>
+              <tr><td><label>Available Seats</label></td><td><%= mod[0].seats %></td></tr>
+              <tr><td><label>No Of Days</label></td><td><%= mod[0].no_of_days %></td></tr>
+              <tr><td><label>Budget/person</label></td><td><%= image_tag image_url "rupee-symbol.jpg" %><strong><%= mod[0].budget %></strong></td></tr>
+          </table>
+            </div>
+            <div class="large-2 columns panel callout">
+              <h6 class="subheader">Joined People</h6>
+              <p class="round"><%=mod[3]%></p>
+
+               <div id = "wanna_join_<%=mod[0].id%>" >
+                 And You!
+               </div>
+
+            </div>
+          </div>
+
+
+
+        </div>
+        <% end %>
+
+       <%= will_paginate @trips %>
+
+  </div>
+  <div class="large-4 columns ">
+    <div class="">
+      <br/><%= link_to "Make A Trip", new_trip_path, :class =>"button radius large" %><br/><br/>
+    </div>
+  </div>
+</div>

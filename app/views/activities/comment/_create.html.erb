@@ -1,0 +1,6 @@
+<% if comment %>
+    commented on <%= link_to comment.inspect, comment.commentable_type.underscore+"s/"+comment.commentable_id.to_s %>
+<% else %>
+    added a comment which has since been removed
+<% end %>
+

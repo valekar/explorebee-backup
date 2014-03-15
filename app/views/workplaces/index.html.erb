@@ -1,0 +1,35 @@
+<h1>Listing workplaces</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @workplaces.each do |workplace| %>
+      <tr>
+        <td><%= workplace.name %></td>
+        <td><%= workplace.description %></td>
+        <td><%= workplace.city %></td>
+        <td><%= workplace.state %></td>
+        <td><%= workplace.country %></td>
+        <td><%= link_to 'Show', workplace %></td>
+        <td><%= link_to 'Edit', edit_workplace_path(workplace) %></td>
+        <td><%= link_to 'Destroy', workplace, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Workplace', new_workplace_path %>

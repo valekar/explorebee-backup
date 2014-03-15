@@ -1,0 +1,1 @@
+$(function(){var e=$("#followers").jScrollPane({verticalGutter:-16}),t=plugins(e),n=e.data("jsp");$.extend(true,n,t);n.addHoverFunc();var e=$("#following").jScrollPane({verticalGutter:-16}),t=plugins(e),n=e.data("jsp");$.extend(true,n,t);n.addHoverFunc()})

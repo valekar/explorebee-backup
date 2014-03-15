@@ -1,0 +1,11 @@
+<% provide(:title, 'Home') %>
+
+
+<% if signed_in? %>
+
+<%= render "users_signed/signed" %>
+
+<% else %>
+    <%= render "unsigned" %>
+
+<% end %>

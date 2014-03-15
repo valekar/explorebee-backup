@@ -1,0 +1,1 @@
+var $el=$(".invite").jScrollPane({verticalGutter:-16}),extensionPlugin=plugins($el),jspapi=$el.data("jsp");$.extend(true,jspapi,extensionPlugin);jspapi.addHoverFunc()

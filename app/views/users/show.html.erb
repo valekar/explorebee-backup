@@ -1,0 +1,89 @@
+<div class="row">
+  <div class="large-12 columns">
+    <section>
+       <div class="large-3 columns th">
+        <%= image_tag current_user.image_url.to_s %>
+       </div>
+       <div class="large-9 columns">
+
+          <h2 class="subheader">
+          <%= @user.name %>
+          </h2>
+
+        <%= render 'follow_form' if signed_in? %>
+
+       </div>
+      <hr>
+    </section>
+  </div>
+</div>
+<div class="row">
+    <div class="large-3 columns">
+      <h4 class="subheader push-3">Followers</h4>
+      <div id="followers">
+
+          <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3">
+            <% @user.followers.each do |follower| %>
+                <li >
+                  <% unless follower.id == @user.id %>
+                      <%= link_to (image_tag follower.image_url.to_s),user_path(follower.id),class: "th"  %>
+                      <%= follower.name  %>
+                  <% end %>
+                </li>
+            <% end %>
+          </ul>
+      </div>
+      <hr/>
+      <h4 class="subheader push-3">Following</h4>
+      <div id="following">
+
+          <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3 callout">
+            <% @user.followed_users.each do |following| %>
+                <li>
+                  <% unless following.id == @user.id  %>
+                    <%= link_to (image_tag following.image_url.to_s),user_path(following.id) ,class: "th" %>
+                    <%= following.name  %>
+                  <% end %>
+                </li>
+            <% end %>
+          </ul>
+      </div>.
+    </div>
+
+    <div class="large-7 columns panel callout">
+      <h3 class="subheader">User Stories</h3>
+      <% unless @user.stories.blank? %>
+          <% @user.stories.each do |story| %>
+            <%= story.name %>
+            <%= story.description %>
+          <% end %>
+      <% else %>
+        <div class="alert-box">
+            <p>Sorry no user stories found</p>
+        </div>
+
+
+      <% end %>
+
+
+            .
+    </div>
+    <div class="large-2 columns">
+            <h4 class="subheader">Interests</h4>
+         <% @user.interests.each do |img| %>
+
+          <%= image_tag img.image_url(:small).to_s %><br>
+          <%= img.name %>
+          <hr>
+          <% end %>
+    </div>
+
+</div>
+
+
+
+
+<% content_for :javascript_includes do %>
+    <%= javascript_include_tag "jScrollPanePlugin" %>
+    <%= javascript_include_tag "signed_index" %>
+<% end %>

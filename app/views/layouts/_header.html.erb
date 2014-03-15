@@ -1,0 +1,116 @@
+<nav class="top-bar" data-topbar>
+<ul class="title-area">
+  <!-- Title Area -->
+  <li class="name">
+    <h1><%= link_to "ExploreBee", root_url  %></h1>
+  </li>
+  <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+  <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+</ul>
+
+<section class="top-bar-section">
+  <!-- Left Nav Section -->
+  <ul class="left">
+    <li class="divider"></li>
+    <li class="active"><%= link_to "Home", root_path %></li>
+    <li class="divider"></li>
+
+
+      </ul>
+
+    </li>
+
+  </ul>
+  <% if signed_in? %>
+   <ul class="left">
+     <!--<li><%#= link_to "videos", video_video_path %></li>-->
+     <li><%= link_to "Places", places_signed_index_path %></li>
+     <li><%= link_to "Trips",trips_path %></li>
+   </ul>
+
+
+  <!-- Right Nav Section -->
+  <ul class="right">
+    <li class="divider hide-for-small"></li>
+
+    <li class="divider"></li>
+
+
+    <li class="has-form">
+      <form>
+        <div class="row collapse">
+
+          <% if check_search? %>
+              <%= form_for search_index_path,url:search_index_path, method: :get do %>
+                  <div class="small-8 columns">
+                    <%= text_field_tag :query,params[:query]  %>
+                  </div>
+                  <div class="small-4 columns">
+                    <%= submit_tag "Search",name:nil, class:"alert button" %>
+                  </div>
+              <% end %>
+
+          <% else %>
+
+              <div ng-controller="SearchCtrl">
+                  <div class="small-8 columns">
+                    <input type="text" ng-model = "searchText" id="query">
+                  </div>
+                  <div class="small-4 columns">
+                    <a href="/search/index?query={{searchText}}" class="alert button" >Search</a>
+                  </div>
+              </div>
+
+
+
+        <% end %>
+
+
+
+        </div>
+      </form>
+
+
+    </li>
+    <li class="divider show-for-small"></li>
+
+
+    <li class="has-dropdown"><a href="#">Account</a>
+      <ul class="dropdown">
+        <li><%= link_to "Profile", current_user %></li>
+        <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+        <li class="divider"></li>
+        <li>
+          <%= link_to "Sign out", signout_path, method: "delete" %>
+        </li>
+      </ul>
+    <% else %>
+
+      <ul class="row">
+        <%= form_for(:session, url: sessions_path) do |f| %>
+
+            <div class="large-2 columns push-4">
+                <li><%= f.text_field :email, placeholder:"Email" ,class:"radius" %> </li>
+            </div>
+          <div class="large-2 columns push-4">
+            <li><%= f.password_field :password,placeholder:"Password"%></li>
+          </div>
+
+          <div class="large-2 columns">
+            <li><%= f.submit 'Sign in', class: " button radius" %></li>
+          </div>
+
+
+
+
+        <% end %>
+      </ul>
+
+    <% end %>
+   </ul>
+</section>
+</nav>
+
+
+
+

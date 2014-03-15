@@ -1,0 +1,55 @@
+<!--this page is for selecting the interests for the first time-->
+<script>
+   window.user = '<%= current_user %>'
+   window.count = '<%= @interests.count%>'
+
+</script>
+
+<div ng-controller="InterestsCtrl">
+  <div class="row">
+    <div class="large-12 columns">
+      <form data-abide>
+        <label>Select A WorkPlace</label>
+      <input type="text" placeholder="WorkPlace/College"
+              ng-model= "user_college" id="user_workplace_tokens" name="user[workplace_tokens]"/>
+
+        <label>Select A Location</label>
+        <input type="text" placeholder="Locations"
+               ng-model= "user_location" id="user_location_tokens" name="user[location_tokens]"/>
+
+                 asdas {{user_location}}
+      </form>
+    </div>
+  </div>
+   <div class="row">
+    <div class="large-12 columns">
+      <div class="row">
+        <%@interests.each_with_index do |interest,index| %>
+           <div class="large-4 columns panel">
+            <div class="row">
+
+                <%= interest.name %>
+                <%= interest.users.count %> Users have this interest
+
+            </div>
+             <div class="row">
+             <%= image_tag interest.image_url(:thumb).to_s %>
+             </div>
+             <div class="row">
+               <%= interest.description %>
+
+               <button class="button tiny" ng-disabled="isDisabled[<%=interest.id %>]" ng-click="addInterest(<%=interest.id %>)">Add</button>
+             </div>
+
+           </div>
+        <% end %>
+      </div>
+        <div class="row">
+          <%# if signed_in?  %>
+              <a href="http://localhost:3000/" ng-click="addWorkPlace()" class="button">Done</a>
+          <%# end %>
+        </div>
+       <!-- <button ng-click = "addWorkPlace()">Aaaaaa</button>-->
+    </div>
+    </div>
+</div>

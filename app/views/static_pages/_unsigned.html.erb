@@ -1,0 +1,100 @@
+
+
+<div class="panel">
+<div class="row">
+
+        <div class=" large-8 columns">
+        <!--<div class="flowplayer">
+        <video>
+        <source type="video/mp4" src="http://stream.flowplayer.org/bauhaus/624x260.mp4">
+        </video>
+        </div>-->
+         Video
+        </div>
+
+        <!-- This is the sign up part-->
+        <div class="large-4 columns push-2">
+
+            <%= link_to "Login With Facebook","/auth/facebook",class:" button btn-facebook push-1" %>
+            <%#= link_to "Linked In","/auth/linkedin",class:"btn btn-large  btn-linkedin" %>
+            <%#= link_to "Twitter","#",class:"btn-large  btn-twitter" %>
+
+
+
+           <!-- Horizontal line-->
+          <div style="height: 2px; background-color: black; text-align: center">
+                <span style="background-color: white; position: relative; top: -0.5em;">
+                   OR
+                </span>
+          </div>
+          <!-- this is for giving gap between facebook button and the form-->
+
+
+          <h2 class="push-4">Sign up</h2>
+
+          <div class="panel  radius">
+            <%= render "shared/user_signup" %>
+          </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+<!--<div ng-controller="PlaceUnsignedCtrl">
+    <button ng-click="getPlaces()" class="tiny">Get Places</button>
+  {{1+2}}
+
+
+  <div ng-repeat="place in places[0]">
+    <a ng-href="place/{{place.id}}">
+
+
+
+
+          <div ng-repeat="img in place.images" ng-hide="!isCurrentSlideIndex($index)">
+          <img src = {{img.image.normal.url}} alt = "image" />
+          </div>
+
+
+    </a>
+  </div>-->
+
+
+</div>
+
+
+
+
+    <div id="masonry-container" >
+
+
+          <% @places.each do |place| %>
+
+            <div class="box col6">
+                <div class="box col5">
+                  <a href="/places/<%= place.id %>">
+                      <ul data-orbit>
+                          <% place.place_albums.each do |img| %>
+                              <li>
+                                 <%= image_tag img.image_url.to_s %>
+                              </li>
+                          <% end %>
+
+                      </ul>
+                  </a>
+                </div>
+                <div class="box col4">
+                     <%= place.description %>
+                </div>
+            </div>
+
+          <% end %>
+
+
+    </div>
+
+
+
+

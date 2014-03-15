@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
+
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%=full_title(yield(:title))    %></title>
+    <%= stylesheet_link_tag "application" %>
+
+
+    <%= include_gon %>
+
+
+
+    <!--THis will be enabled in the next release-->
+    <%#= javascript_include_tag "http://localhost:9292/faye.js" %>
+    <%= csrf_meta_tags %>
+
+    <!-- 2. flowplayer -->
+   <!-- <script src="//releases.flowplayer.org/5.4.3/flowplayer.min.js"></script>-->
+
+    <!-- 3. skin -->
+ <!--<link rel="stylesheet" href="//releases.flowplayer.org/5.4.3/skin/minimalist.css">-->
+    <!-- 3. flowplayer -->
+
+
+
+
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>-->
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>-->
+    <!--<script src="/assets/angular.js?body=1"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/assets/angular.js?body=1"></script>
+
+<!--    <script src="/assets/minifiedProduction/MinifiedApp.js?body=1"></script>-->
+
+  </head>
+  <body ng-app="myApp">
+
+  <%=render 'layouts/header' %>
+  <div class="container">
+
+    <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+    <%= yield %>
+    <%#= render 'layouts/footer' %>
+  </div>
+
+  <!--<link rel="stylesheet" href="//releases.flowplayer.org/5.4.6/skin/minimalist.css">
+  <script src="//releases.flowplayer.org/5.4.6/flowplayer.min.js"></script>-->
+
+  <!--<link rel="stylesheet" src="minimalist">-->
+<!--  <link href="/assets/minimalist.css?body=1" media="screen" rel="stylesheet" />-->
+  <link rel="stylesheet" href="//releases.flowplayer.org/5.4.6/skin/minimalist.css">
+<!--  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>-->
+  <script src="/assets/minifiedVendor/flowplayer_html5.min.js"></script>
+
+
+  <%= javascript_include_tag "application" %>
+
+  <%= yield :javascript_includes %>
+  </body>
+</html>

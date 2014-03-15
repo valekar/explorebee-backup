@@ -1,0 +1,174 @@
+<div ng-controller="TripCtrl">
+<div class="th" >
+<%= form_for(@trip) do |f| %>
+  <% if @trip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trip.errors.count, "error") %> prohibited this trip from being saved:</h2>
+
+      <ul>
+      <% @trip.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <form data-abide>
+  <table>
+
+    <tr>
+      <td>
+          <div class="field">
+
+
+            <input type="text" value="" name="trip[name]" id="trip_name" placeholder="Trip Name" required>
+          </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <div class="field">
+
+            <textarea name="trip[description]" id="trip_description" required placeholder="Write a Description"></textarea>
+          </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="field">
+          <input id="trip_from_tokens" type="text" name="trip[from_tokens]" required style="display: none;" placeholder="From">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="field">
+
+          <%#= f.text_field :place_tokens %>
+          <input id="trip_place_tokens" type="text" name="trip[place_tokens]" required style="display: none;" placeholder="Destinations">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <div class="field">
+
+            <input type="text"  placeholder="When" id="dpd1" required name="trip[when_at]" required>
+          </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <div class="field">
+
+            <input type="number" value="" name="trip[no_of_days]" id="trip_no_of_days" placeholder="No of Days" required pattern="[0-9]+">
+          </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <div class="field">
+
+            <input type="number" value="" name="trip[budget]" id="trip_budget" placeholder="Budget Per Person" required pattern="[0-9]+">
+          </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="field">
+
+          <input type="number" value="" name="trip[seats]" id="trip_seat" placeholder="No of Seats" required pattern="[0-9]+">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="field">
+          <input type="number" value="" name="trip[phone]" id="trip_phone" placeholder="Your Contact" required pattern="[0-9]+">
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <button ng-click="inviteFollowers()" data-reveal-id="invite_followers">Invite Followers</button>
+        <button ng-click="inviteOthers()">Invite Others</button>
+      </td>
+
+    </tr>
+
+
+     <input type="hidden" name=trip[userIds] value="{{userIds}}">
+
+    <tr>
+      <td>
+          <div class="actions">
+
+            <input type="submit" value="Make a Trip" name="commit" class="medium button">
+          </div>
+      </td>
+    </tr>
+  </table>
+  </form>
+<% end %>
+
+
+
+</div>
+
+  <div class="reveal-modal medium" data-reveal id="invite_followers">
+
+    <div id="masonry-containe" >
+      <div ng-repeat="user in users.data.users">
+        <div class="masonry_box large-2 columns">
+
+            <input type="checkbox" ng-checked="user_ids.indexOf(user.id) > -1"
+                   ng-click="toggleSelection(user.id)">
+            <img ng-src="{{user.image.thumb.url}}" class="decoded"/>
+          {{user.name}}
+        </div>
+
+      </div>
+    </div>
+    <a class="close-reveal-modal tiny">Done</a>
+  </div>
+
+
+
+</div>
+
+
+<% content_for :javascript_includes do %>
+    <%= javascript_include_tag "minifiedVendor/foundation-datepicker" %>
+
+<% end %>
+
+<script>
+    $(function () {
+
+        // implementation of disabled form fields
+        var nowTemp = new Date();
+        var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate());
+
+        var d = new Date();
+        var curr_date = d.getDate();
+        var curr_month = d.getMonth() + 1; //Months are zero based
+        var curr_year = d.getFullYear();
+        var dd = curr_date + "/" + curr_month + "/" + curr_year;
+
+        // $('#dpd1').val(dd);
+
+        var checkin = $('#dpd1').fdatepicker({
+            onRender: function (date) {
+                return date.valueOf() < now.valueOf() ? 'disabled' : '';
+            }
+        }).data('datepicker');
+
+
+    });
+
+
+</script>
+
+
+

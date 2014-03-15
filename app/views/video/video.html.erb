@@ -1,0 +1,90 @@
+<div ng-controller="VideoCtrl">
+<div class="row"></div>
+
+
+  <div class="large-2 columns ">
+    <ul class="side-nav right">
+      <li class="active"><a href="#">Link 1</a></li>
+      <li><a href="#" >Link 2</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Link 3</a></li>
+      <li><a href="#">Link 4</a></li>
+    </ul>
+
+
+
+
+  </div>
+ <div class="large-9 columns">
+
+      <div ng-repeat="video in videosDetail">
+        <div class="large-6 columns">
+
+          <div class="large-8 columns">
+              <a class="th" flow="" url = "{{video.file.url}}"  style="display:block;width:300px;height:230px;">
+              <img  ng-src="{{video.file.thumb.url}}"  width="300px" height="230px" /></a>
+          </div>
+          <div class="large-4 columns">
+               Description :: <span ng-bind="video.description"></span>
+          </div>
+        </div>
+      </div>
+
+
+
+
+ </div>
+
+<!--
+  <div ng-repeat="video in videosDetail">
+    <a ng-href="{{video.file.url}}"
+       style="display:block;width:200px;height:150px;"
+       id="player">
+    </a>
+    {{video.file.url}}
+
+  </div>-->
+
+  <!--<input type = "hidden" value="{{videosDetail[0].file.url}}" id="vid">-->
+
+
+  <!--<a ng-href="{{videosDetail[0].file.url}}"
+     style="display:block;width:200px;height:150px;"
+     id="player">
+  </a>-->
+
+<!-- <div myflowplayer url = "{{videosDetail[0].file.url}}"> asdasd
+  </div>-->
+
+
+
+
+<!--
+  <a flow-player="" id="player"  url = "{{videosDetail[0].file.url}}" style="display:block;width:200px;height:150px;"> adsasd</a>-->
+
+
+<!-- <script language="JavaScript">
+      flowplayer("player", "/flowplayer.swf", {
+          clip:  {
+              autoPlay: false,
+              autoBuffering: true
+          },
+          plugins: { // load one or more plugins
+              controls: { // load the controls plugin
+
+                  // always: where to find the Flash object
+                  url: '/flowplayer.controls-tube-3.2.15.swf'
+                  // display properties
+                  ,
+                  tooltips: { // this plugin object exposes a 'tooltips' object
+                      buttons: true,
+                      fullscreen: 'Enter Fullscreen mode'
+                  }
+              }
+          }
+      });
+  </script>-->
+
+  <div class="large-1 columns"></div>
+
+</div>

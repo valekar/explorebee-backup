@@ -1,0 +1,22 @@
+<% provide(:title, 'Sign up') %>
+
+    <%= form_for @user,:html=>{multipart:true}  do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+
+
+        <%= f.text_field :name,placeholder:"Name"%>
+
+
+        <%= f.text_field :email,placeholder:"Email"%>
+
+
+        <%= f.password_field :password ,placeholder:"Password"%>
+
+
+        <%= f.password_field :password_confirmation ,placeholder:"Confirmation"%>
+
+        <%#= f.file_field :image,placeholder:"upload your photo",class:"button" %>
+
+
+        <div><%= f.submit "Create my account", class: "button"  %></div>
+    <% end %>
