@@ -42,7 +42,7 @@ gem 'omniauth-linkedin'
 
 #authorization
 gem 'cancan'
-
+gem 'sprockets', '2.11.0'
 gem 'rmagick'
 gem 'carrierwave'
 gem 'carrierwave-video'
