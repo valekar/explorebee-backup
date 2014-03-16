@@ -51,7 +51,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
         else{
             alert("Hi, there, we didn't think you are having nothing");
         }
-    }
+    };
     //***********************************************************************************************************//
     //method for comment section
 
@@ -59,7 +59,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
 
         var comment = {
             content:micropost.commentIt
-        }
+        };
         var model = "microposts";
         var id = micropost.micropost.id;
         var Comment = CommentUrlService.getUrl(model,id);
@@ -439,7 +439,7 @@ function PlaceShowCtrl($scope,StoryServices){
     //alert("ads");
     //$scope.user_rating = 2;
     //passed from the controller
-    $scope.current_user_id = gon.user_id
+    $scope.current_user_id = gon.user_id;
 
     //pased from the controller
     if(gon.rating){
@@ -606,9 +606,9 @@ InterestsCtrl.$inject = ['$window','$scope','AddInterestService','UserServices']
 function InterestsCtrl($window,$scope,AddInterestService,UserServices){
 
     $scope.interstIds = [];
-    $scope.currentUser = $window.user
+    $scope.currentUser = $window.user;
 
-    var user_id = gon.user_id
+    var user_id = gon.user_id;
     $scope.isDisabled = {};
     $scope.addInterest = function(interestId){
         //var interestId = interest.id;
@@ -735,7 +735,7 @@ function TripIndexCtrl($scope){
     };
 
     //$scope.trip = [];
-    $scope.trips = gon.trips
+    $scope.trips = gon.trips;
     // $scope.ss = "asdsa";
 
 
