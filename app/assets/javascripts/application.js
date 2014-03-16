@@ -43,7 +43,7 @@
 
 
 
-//=require_directory minifiedProduction
+//=require_directory ./minifiedProduction
 
 
 
