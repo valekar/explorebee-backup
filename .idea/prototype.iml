@@ -174,7 +174,7 @@
     <orderEntry type="library" scope="PROVIDED" name="faye (v1.0.1, RVM: ruby-2.0.0-p451 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faye-websocket (v0.7.2, RVM: ruby-2.0.0-p451 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.3, RVM: ruby-2.0.0-p451 [global]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="foundation-icons-sass-rails (v2.0.0@296719, RVM: ruby-2.0.0-p451 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="foundation-icons-sass-rails (v3.0.0@14554a, RVM: ruby-2.0.0-p451 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="friendly_id (v5.0.3, RVM: ruby-2.0.0-p451 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="gherkin (v2.12.2, RVM: ruby-2.0.0-p451 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="gon (v5.0.4, RVM: ruby-2.0.0-p451 [global]) [gem]" level="application" />

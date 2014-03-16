@@ -51,7 +51,7 @@ gem 'streamio-ffmpeg'
 gem 'protected_attributes'
 gem 'dalli'
 gem 'activerecord-reputation-system',:require => "reputation_system"
-gem 'foundation-icons-sass-rails', github: 'jasontorres/foundation-icons-sass-rails'
+gem 'foundation-icons-sass-rails', github: 'zaiste/foundation-icons-sass-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.3.7'

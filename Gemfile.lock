@@ -5,19 +5,19 @@ GIT
     database_cleaner (1.2.0)
 
 GIT
-  remote: git://github.com/jasontorres/foundation-icons-sass-rails.git
-  revision: 29671928b10902b78476d0ba29092fc55fa51014
-  specs:
-    foundation-icons-sass-rails (2.0.0)
-      railties (>= 3.1.1)
-      sass-rails (>= 3.1.1)
-
-GIT
   remote: git://github.com/ryanb/private_pub.git
   revision: 7ad77617b1f48980d6f114bc96018f2964a07bdc
   specs:
     private_pub (1.0.3)
       faye
+
+GIT
+  remote: git://github.com/zaiste/foundation-icons-sass-rails.git
+  revision: 14554ad963c7258e5d40a460a0a12b0b1c0ce351
+  specs:
+    foundation-icons-sass-rails (3.0.0)
+      railties (>= 3.1.1)
+      sass-rails (>= 3.1.1)
 
 GEM
   remote: http://rubygems.org/
