@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8766b72-7525-427e-91d5-c240c06bca6b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/production/AllController.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/production/AllController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/production/AllDirective.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/production/AllDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/production/AllService.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/production/AllService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/production/app.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/production/app.js" />
     </list>
     <ignored path="prototype.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,19 +101,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="153" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+            <state line="2" column="135" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0456621" vertical-offset="0" max-vertical-offset="657">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Custom.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Custom.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/Custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="54" selection-start="621" selection-end="621" vertical-scroll-proportion="0.5936073" vertical-offset="0" max-vertical-offset="1185">
+            <state line="26" column="54" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185">
               <folding />
             </state>
           </provider>
@@ -184,12 +182,12 @@
         <option value="$PROJECT_DIR$/config/recipes/assets.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/production/app.js" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/production/AllController.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/production/AllDirective.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/production/AllService.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/production/app.js" />
       </list>
     </option>
   </component>
@@ -1107,6 +1105,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/Custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="54" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/AllService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="248" column="6" selection-start="7846" selection-end="7846" vertical-scroll-proportion="0.0" vertical-offset="8613" max-vertical-offset="9270">
@@ -1116,14 +1121,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="153" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/Custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="54" selection-start="621" selection-end="621" vertical-scroll-proportion="0.5936073" vertical-offset="0" max-vertical-offset="1185">
+        <state line="2" column="135" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0456621" vertical-offset="0" max-vertical-offset="657">
           <folding />
         </state>
       </provider>

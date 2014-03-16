@@ -1,6 +1,6 @@
 var app = angular.module('myApp',
         ['ngRoute',
-            'ngResource','ng-rails-csrf','ngCookies','angularFileUpload','app.UtilityServices','infinite-scroll','ratings','ngProgress','ngSanitize','ngCookies'])
+            'ngResource','ng-rails-csrf','ngCookies','angularFileUpload','app.UtilityServices','infinite-scroll','ratings','ngProgress'])
     .config(function($routeProvider){
         $routeProvider.when("/",{
             //templateUrl:'/angularTemplates/dashboard.html',
