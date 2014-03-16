@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8766b72-7525-427e-91d5-c240c06bca6b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
     </list>
     <ignored path="prototype.iws" />
@@ -29,15 +30,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PlaceServices.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/client/servicesJS/PlaceServices.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="10" selection-start="748" selection-end="748" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1260">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StoryServices.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/client/servicesJS/StoryServices.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -110,10 +102,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="64" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.4139073" vertical-offset="270" max-vertical-offset="1200">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="0" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.48387095" vertical-offset="75" max-vertical-offset="1005">
+            <state line="59" column="0" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1200">
               <folding />
             </state>
           </provider>
@@ -161,7 +162,6 @@
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/views/show_interests/index.html.erb" />
         <option value="$PROJECT_DIR$/config/recipes/assets.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
@@ -188,6 +188,7 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/client/servicesJS/util.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/client/MainModuleJS/app.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -843,11 +844,6 @@
         <state line="28" column="0" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="65" selection-start="1700" selection-end="1700" vertical-scroll-proportion="-11.583333" vertical-offset="367" max-vertical-offset="1200" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/assets/stylesheets/photo.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="0" selection-start="543" selection-end="543" vertical-scroll-proportion="0.5933544" vertical-offset="0" max-vertical-offset="3435" />
@@ -1088,6 +1084,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="0" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/client/MainModuleJS/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="158" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
@@ -1095,9 +1098,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.48387095" vertical-offset="75" max-vertical-offset="1005">
+        <state line="43" column="64" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.4139073" vertical-offset="270" max-vertical-offset="1200">
           <folding />
         </state>
       </provider>
