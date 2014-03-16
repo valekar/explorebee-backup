@@ -17,7 +17,7 @@
         <input type="text" placeholder="Locations"
                ng-model= "user_location" id="user_location_tokens" name="user[location_tokens]"/>
 
-                 asdas {{user_location}}
+                 <!--asdas {{user_location}}-->
       </form>
     </div>
   </div>
@@ -46,7 +46,7 @@
       </div>
         <div class="row">
           <%# if signed_in?  %>
-              <a href="http://localhost:3000/" ng-click="addWorkPlace()" class="button">Done</a>
+              <a href="<%= root_path %>" ng-click="addWorkPlace()" class="button">Done</a>
           <%# end %>
         </div>
        <!-- <button ng-click = "addWorkPlace()">Aaaaaa</button>-->
