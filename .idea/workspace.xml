@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8766b72-7525-427e-91d5-c240c06bca6b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/production/AllController.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/production/AllController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/production/AllDirective.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/production/AllDirective.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/production/AllService.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/production/AllService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Production__prototype.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Production__prototype.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/production/app.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/production/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/manifest-74163a682f8b82e5f26d441b45149cff.json" afterPath="$PROJECT_DIR$/public/assets/manifest-74163a682f8b82e5f26d441b45149cff.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/prototype.iml" afterPath="$PROJECT_DIR$/.idea/prototype.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,7 +22,8 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/prototype@Development__prototype.coverage" NAME="Development: prototype Coverage Results" MODIFIED="1394951178156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="prototype" />
+    <SUITE FILE_PATH="coverage/prototype@Development__prototype.coverage" NAME="Development: prototype Coverage Results" MODIFIED="1394951955835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="prototype" />
+    <SUITE FILE_PATH="coverage/prototype@Production__prototype.coverage" NAME="Production: prototype Coverage Results" MODIFIED="1394951880956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="prototype" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -31,7 +40,25 @@
       <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="27" selection-start="727" selection-end="735" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
+            <state line="18" column="26" selection-start="671" selection-end="678" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AllController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/AllController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="788" column="0" selection-start="22267" selection-end="22267" vertical-scroll-proportion="0.0" vertical-offset="11218" max-vertical-offset="11910">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="production.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="31" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
               <folding />
             </state>
           </provider>
@@ -46,28 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utility_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/utility_controller.rb">
+      <file leaf-file-name="AllDirective.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/AllDirective.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1365">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ratings_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/ratings_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="4245">
+            <state line="368" column="1" selection-start="8741" selection-end="8741" vertical-scroll-proportion="0.0" vertical-offset="4918" max-vertical-offset="5610">
               <folding />
             </state>
           </provider>
@@ -76,16 +85,7 @@
       <file leaf-file-name="deploy.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.023734177" vertical-offset="15" max-vertical-offset="1260">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="locations_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/locations_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1290">
+            <state line="2" column="1" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0456621" vertical-offset="0" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
@@ -100,10 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="microposts_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/microposts_controller.rb">
+      <file leaf-file-name="AllService.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/AllService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="28" selection-start="773" selection-end="773" vertical-scroll-proportion="0.0" vertical-offset="328" max-vertical-offset="1050">
+            <state line="602" column="6" selection-start="17214" selection-end="17214" vertical-scroll-proportion="0.0" vertical-offset="8638" max-vertical-offset="9270">
               <folding />
             </state>
           </provider>
@@ -112,7 +112,16 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="60" selection-start="996" selection-end="996" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+            <state line="2" column="153" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Custom.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/Custom.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="54" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="528" max-vertical-offset="1185">
               <folding />
             </state>
           </provider>
@@ -136,7 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/client/controllersJS/ChatControllerJS.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/client/controllersJS/RightHomeController.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/client/controllersJS/ShowInterestPageController.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/client/controllersJS/TripController.js" />
@@ -156,9 +164,6 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/client/servicesJS/UserServices.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/client/servicesJS/util.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/client/controllersJS/LeftHomeController.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/production/AllController.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/production/AllDirective.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/production/AllService.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/production/Custom.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/workplaces.js" />
         <option value="$PROJECT_DIR$/app/controllers/interests_controller.rb" />
@@ -183,9 +188,13 @@
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/views/show_interests/index.html.erb" />
         <option value="$PROJECT_DIR$/config/recipes/assets.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/production/app.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/production/AllController.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/production/AllDirective.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/production/AllService.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/production/app.js" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
       </list>
     </option>
@@ -335,6 +344,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="recipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="environments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -804,11 +831,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-p451@global/gems/activerecord-4.0.0/lib/active_record/query_cache.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.0" vertical-offset="394" max-vertical-offset="930" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-p451@global/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="633" column="0" selection-start="21797" selection-end="21797" vertical-scroll-proportion="0.0" vertical-offset="9124" max-vertical-offset="9660" />
@@ -946,19 +968,9 @@
         <state line="0" column="2851" selection-start="2851" selection-end="2851" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="644" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/Custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="36" selection-start="0" selection-end="1944" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1185" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/minifiedProduction/MinifiedCustom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="1462" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="619" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/AllController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="12" selection-start="0" selection-end="22234" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="11910" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/minifiedProduction/MinifiedController.js">
@@ -968,23 +980,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/AllService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="592" column="1" selection-start="16937" selection-end="16937" vertical-scroll-proportion="0.0" vertical-offset="8638" max-vertical-offset="9270">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/minifiedProduction/MinifiedService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="596" column="0" selection-start="17033" selection-end="17033" vertical-scroll-proportion="0.0" vertical-offset="8591" max-vertical-offset="9270">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/AllDirective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="255" column="19" selection-start="5010" selection-end="5010" vertical-scroll-proportion="0.0" vertical-offset="3628" max-vertical-offset="5610">
           <folding />
         </state>
       </provider>
@@ -1080,23 +1078,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="31" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/AllController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="788" column="0" selection-start="22267" selection-end="22267" vertical-scroll-proportion="0.0" vertical-offset="11218" max-vertical-offset="11910">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/AllDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="368" column="1" selection-start="8741" selection-end="8741" vertical-scroll-proportion="0.0" vertical-offset="4918" max-vertical-offset="5610">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/AllService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="602" column="6" selection-start="17214" selection-end="17214" vertical-scroll-proportion="0.0" vertical-offset="8638" max-vertical-offset="9270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/Custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="54" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="528" max-vertical-offset="1185">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="27" selection-start="727" selection-end="735" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
+        <state line="18" column="26" selection-start="671" selection-end="678" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="60" selection-start="996" selection-end="996" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+        <state line="2" column="153" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.023734177" vertical-offset="15" max-vertical-offset="1260">
+        <state line="2" column="1" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0456621" vertical-offset="0" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>

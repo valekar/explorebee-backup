@@ -327,7 +327,7 @@ function tripJoin(TripServices) {
                     trip_id:$scope.trip_id,
                     trip_acceptance:$scope.acceptance,
                     trip_invitee:$scope.trip_invitee
-                }
+                };
 
                 var acceptance = acceptanceUrl.save(acceptance);
 

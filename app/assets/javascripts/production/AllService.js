@@ -69,8 +69,8 @@ function FileUploadService($upload){
     }
 
 }
-app.factory("VideoUploadService",VideoUploadService)
-VideoUploadService.$inject = ['$upload','ngProgress','$timeout']
+app.factory("VideoUploadService",VideoUploadService);
+VideoUploadService.$inject = ['$upload','ngProgress','$timeout'];
 
 function VideoUploadService($upload,ngProgress,$timeout){
     var datas = [];
@@ -138,7 +138,7 @@ function GetVideosService($http){
         getVideoUrl:function(){
             return $http.get("/get_videos");
         }
-    }
+    };
     return service;
 }
 
@@ -280,7 +280,7 @@ function AddInterestService($resource){
             var url = "/interestship";
             return $resource(url);
         }
-    }
+    };
 
     return service;
 
@@ -293,7 +293,7 @@ function GetInterestsService($http){
         getInterest:function(){
             return $http.get("/show_interests/get_index");
         }
-    }
+    };
     return service;
 }
 
@@ -322,7 +322,7 @@ function PlaceServices($http){
         }
 
 
-    }
+    };
 
     return service;
 
@@ -336,7 +336,7 @@ function PlaceFavouriteService($http){
         getPlaceUrl:function(id){
             return $http.get("/places/favourite?place="+id);
         }
-    }
+    };
 
     return service;
 
@@ -383,7 +383,7 @@ function StoryServices($resource){
         setStoryUrl:function(){
             return $resource("/stories/create_story/:id.json",{id:'@id'})
         }
-    }
+    };
 
     return service;
 }
@@ -416,7 +416,7 @@ function UserServices($resource,$http){
             return $resource("/users/relate/:id.json", {id:"@id"})
         }
 
-    }
+    };
 
     return service;
 }
@@ -510,7 +510,7 @@ function VoteUrlService($resource){
             return $resource("/attachments/vote_video_attachment");
         }
 
-    }
+    };
 
     return service;
 }
@@ -539,7 +539,7 @@ function flowPlayerService(){
                 }
             });
         }
-    }
+    };
 
     return service;
 }
@@ -600,7 +600,7 @@ function SuggestionServices($http){
         getFriendSuggestions:function(){
             return $http.get("/utility/getSuggestions");
         }
-    }
+    };
     return service;
 }
 

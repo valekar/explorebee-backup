@@ -1,6 +1,6 @@
-app.controller("AttachmentCtrl",AttachmentCtrl)
+app.controller("AttachmentCtrl",AttachmentCtrl);
 
-AttachmentCtrl.$inject = []
+AttachmentCtrl.$inject = [];
 function AttachmentCtrl(){
 
 }
@@ -21,7 +21,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
         PhotoService.getPhoto().success(function(data){
             $scope.myPhoto =  data;
         });
-    }
+    };
 
 
 
@@ -78,7 +78,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
 
         var vote = {
             type:"up"
-        }
+        };
         var model = "microposts";
         var id = micropost.micropost.id;
         var Vote = VoteUrlService.vote(model,id);
@@ -87,7 +87,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
 
         $scope.vote = voted;
 
-    }
+    };
 
 
     //***********************************************************************************************************//
@@ -96,7 +96,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
     $scope.onFileSelect = function($files){
         PhotoUploadService.uploadPhoto($files,$scope.myModelObj,$scope.upload);
         $scope.datas = PhotoUploadService.getUploadedDatas();
-    }
+    };
     //**********************************************************************************************************//
 
     //this is used for angular file upload
@@ -104,19 +104,19 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
 
     $scope.toggleUpload = function(){
         $scope.flag2 = true;
-    }
+    };
     //this is where the file attachment takes place
     $scope.onFileAttach = function($files){
         FileUploadService.attachFile($files,$scope.description,$scope.upload,$scope.interestIds);
         $scope.attachments = FileUploadService.getUploadedAttachment();
         $scope.description = " ";
         $scope.fileAttach = " ";
-    }
+    };
     //comment part for the file attachment section
     $scope.attachmentComment = function(attachment){
         var comment = {
             content:attachment.commentIt
-        }
+        };
         var model = "attachments";
         var id = attachment.getFiles.id;
 
@@ -136,7 +136,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
 
     $scope.toggleVideoUpload = function(){
         $scope.flag4 = true;
-    }
+    };
     //this is where the file attachment takes place
     $scope.onVideoAttach = function($files){
 
@@ -150,13 +150,13 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
         $scope.videoAttachs = VideoUploadService.getUploadedAttachment();
         $scope.videoDesc = " ";
         //$scope.fileAttach = " ";
-    }
+    };
 
     //comment part for the file attachment section
     $scope.videoComment = function(vadeo){
         var comment = {
             content:vadeo.commentIt
-        }
+        };
         var model = "video_attachments";
         var id = vadeo.getFiles.id;
 
@@ -193,7 +193,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
 
             })
         }
-    }
+    };
     $scope.isDisabled = {};
     $scope.toggleInterest = function(id){
         $scope.interestIds.push(id);
@@ -206,7 +206,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
 
 //This one is for showing the activities/notifications, I have moved the code from the activity page to this page
 
-app.controller("ActivityCtrl",ActivityCtrl)
+app.controller("ActivityCtrl",ActivityCtrl);
 ActivityCtrl.$inject =['$scope','ActivityIndexService','ActivityOtherUserService','VoteUrlService','CommentUrlService'];
 function ActivityCtrl($scope,ActivityIndexService,ActivityOtherUserService,VoteUrlService,CommentUrlService){
     var counter = 0;
@@ -217,8 +217,8 @@ function ActivityCtrl($scope,ActivityIndexService,ActivityOtherUserService,VoteU
 
 
 
-    $scope.activities = []
-    $scope.usersDetails = []
+    $scope.activities = [];
+    $scope.usersDetails = [];
     $scope.myPagingFunction = function(){
         counter += 1;
         if(flag){
@@ -250,14 +250,14 @@ function ActivityCtrl($scope,ActivityIndexService,ActivityOtherUserService,VoteU
             });
         }
 
-    }
+    };
 
     //Here we are passing userDetail only for model,id purpose....the commenting person is different
 
     $scope.comment = function(userDetail){
         var comment = {
             content:userDetail.commentIt
-        }
+        };
         var model = userDetail.feedModel;
         var id = userDetail.feed.id;
         var Comment = CommentUrlService.getUrl(model,id);
@@ -324,13 +324,13 @@ function ActivityCtrl($scope,ActivityIndexService,ActivityOtherUserService,VoteU
 
 
 
-app.controller("ChatCtrl", ChatCtrl)
+app.controller("ChatCtrl", ChatCtrl);
 
-ChatCtrl.$inject = ['$scope','MessageService']
+ChatCtrl.$inject = ['$scope','MessageService'];
 
 function ChatCtrl($scope,MessageService){
 
-    $scope.messages = []
+    $scope.messages = [];
     $scope.sendMessage = function(){
         //alert($scope.data.message);
         $scope.messages.push($scope.data.message);
@@ -466,11 +466,11 @@ function PlaceShowCtrl($scope,StoryServices){
             story_name:$scope.story_name,
             story_description:$scope.story_description,
             place_id:placeId
-        }
+        };
 
         story = StoryServices.setStoryUrl().save(story);
 
-    }
+    };
 
     // for getting more details
     $scope.detailDescription = null;
@@ -492,7 +492,7 @@ function PlaceShowCtrl($scope,StoryServices){
 
 //Used in places/index.html.erb
 app.controller("PlaceNewController",PlaceNewController);
-PlaceNewController.$inject = ['$scope','PlaceVideoUploadService']
+PlaceNewController.$inject = ['$scope','PlaceVideoUploadService'];
 
 function PlaceNewController($scope,PlaceVideoUploadService){
     $scope.onVideoAttach = function($files,placeId){
@@ -517,7 +517,7 @@ function PlaceUnsignedCtrl($scope,UnsignedPlaceServices){
         UnsignedPlaceServices.getRecentPlaces().success(function(data){
             $scope.places.push(data);
         });
-    }
+    };
 
 
 
@@ -605,7 +605,7 @@ app.controller("InterestsCtrl",InterestsCtrl);
 InterestsCtrl.$inject = ['$window','$scope','AddInterestService','UserServices'];
 function InterestsCtrl($window,$scope,AddInterestService,UserServices){
 
-    $scope.interstIds = []
+    $scope.interstIds = [];
     $scope.currentUser = $window.user
 
     var user_id = gon.user_id
@@ -616,7 +616,7 @@ function InterestsCtrl($window,$scope,AddInterestService,UserServices){
         var id = {
             id:interestId,
             user_id:user_id
-        }
+        };
 
         $scope.isDisabled[interestId] = true;
 
@@ -676,7 +676,7 @@ function InterestsCtrl($window,$scope,AddInterestService,UserServices){
 }
 
 //trips/new.html
-app.controller("TripCtrl",TripCtrl)
+app.controller("TripCtrl",TripCtrl);
 TripCtrl.$inject = ['$scope','UserServices'];
 
 function TripCtrl($scope,UserServices){
@@ -697,7 +697,7 @@ function TripCtrl($scope,UserServices){
     };
 
     //This is used for the checkbox
-    $scope.userIds=[]
+    $scope.userIds=[];
     $scope.toggleSelection = function toggleSelection(id) {
         var idx = $scope.userIds.indexOf(id);
 
@@ -714,7 +714,7 @@ function TripCtrl($scope,UserServices){
 
 }
 //trips/index.html.erb
-app.controller("TripIndexCtrl",TripIndexCtrl)
+app.controller("TripIndexCtrl",TripIndexCtrl);
 TripIndexCtrl.$inject = ['$scope'];
 
 function TripIndexCtrl($scope){
@@ -727,12 +727,12 @@ function TripIndexCtrl($scope){
     $scope.join = function(id){
         $scope.acceptance = !$scope.acceptance;
         $scope.unjoinToggleOut = !$scope.unjoinToggleOut
-    }
+    };
 
     $scope.unjoin = function(id){
         $scope.joinToggleOut = !$scope.joinToggleOut;
         $scope.acceptance = !$scope.acceptance;
-    }
+    };
 
     //$scope.trip = [];
     $scope.trips = gon.trips
@@ -757,7 +757,7 @@ function VideoCtrl($scope,$window,GetVideosService){
     $window.onload = function(){
         //alert("hello world");
         $scope.videos=[];
-        $scope.videosDetail = []
+        $scope.videosDetail = [];
         GetVideosService.getVideoUrl().success(function(data){
 
             // I got the object like this [[[]]] so using three loops
