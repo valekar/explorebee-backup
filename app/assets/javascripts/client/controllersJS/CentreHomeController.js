@@ -5,8 +5,8 @@ CentreHomeController.$inject = ['$scope','Micropost','PhotoService','VideoUpload
             'CommentUrlService','$upload','GetInterestsService','PhotoUploadService','FileUploadService','$rootScope'];
 
 function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,VoteUrlService,
-                                         $window,CommentUrlService,$upload,GetInterestsService,
-                                         PhotoUploadService,FileUploadService,$rootScope){
+                              $window,CommentUrlService,$upload,GetInterestsService,
+                              PhotoUploadService,FileUploadService,$rootScope){
     //got this from the global declaration
     $rootScope.currentUserName = $window.user;
 

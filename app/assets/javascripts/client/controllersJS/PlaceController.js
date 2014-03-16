@@ -108,10 +108,10 @@ function PlaceShowCtrl($scope,StoryServices,PlaceDetailServices){
         $scope.detailDescription = null;
         $scope.detailShow = false;
         $scope.getPlaceDetails = function(){
-            console.log("asdasdasdasdasdadsdasdas"+gon.id);
+            //console.log("asdasdasdasdasdadsdasdas"+gon.id);
             PlaceDetailServices.getDetailDescription(trackable_id).success(function(data){
                 $scope.detailDescription = data;
-                console.log($scope.detailDescription);
+                //console.log($scope.detailDescription);
                 $scope.detailShow = true;
             });
 
@@ -140,7 +140,7 @@ function PlaceNewController($scope,PlaceVideoUploadService){
     }
 
 app.controller("PlaceUnsignedCtrl",PlaceUnsignedCtrl);
-PlaceUnsignedCtrl.$inject=["$scope","UnsignedPlaceServices"];
+PlaceUnsignedCtrl.$inject=['$scope','UnsignedPlaceServices'];
 
 function PlaceUnsignedCtrl($scope,UnsignedPlaceServices){
 

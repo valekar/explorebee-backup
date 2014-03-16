@@ -1,6 +1,6 @@
-var op = angular.module("app.UtilityServices",[]);
+//var op = angular.module("app.UtilityServices",[]);
 
-    op.factory("PhotoService",PhotoService);
+    app.factory("PhotoService",PhotoService);
 
 PhotoService.$inject = ['$http'];
 function PhotoService($http){
@@ -11,7 +11,7 @@ function PhotoService($http){
         }
     }
 
-    op.factory("CurrentUserService",CurrentUserService);
+    app.factory("CurrentUserService",CurrentUserService);
 
 CurrentUserService.$inject = ['$http'];
 function CurrentUserService($http){
