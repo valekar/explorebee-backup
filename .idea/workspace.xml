@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8766b72-7525-427e-91d5-c240c06bca6b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/show_interests/index.html.erb" afterPath="$PROJECT_DIR$/app/views/show_interests/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/prototype.iml" afterPath="$PROJECT_DIR$/.idea/prototype.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/recipes/assets.rb" afterPath="$PROJECT_DIR$/config/recipes/assets.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
     </list>
     <ignored path="prototype.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,10 +47,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/show_interests/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="36" selection-start="1594" selection-end="1594" vertical-scroll-proportion="0.70394737" vertical-offset="292" max-vertical-offset="900">
+            <state line="48" column="36" selection-start="1594" selection-end="1594" vertical-scroll-proportion="-17.833334" vertical-offset="292" max-vertical-offset="900">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="assets.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/recipes/assets.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="0" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.664557" vertical-offset="0" max-vertical-offset="632">
               <folding />
             </state>
           </provider>
@@ -89,7 +95,7 @@
       <file leaf-file-name="deploy.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0" vertical-offset="267" max-vertical-offset="1260">
+            <state line="2" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
@@ -99,15 +105,6 @@
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
             <state line="44" column="25" selection-start="925" selection-end="925" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="1800">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AllService.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/production/AllService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="592" column="1" selection-start="16937" selection-end="16937" vertical-scroll-proportion="0.0" vertical-offset="8880" max-vertical-offset="9270">
               <folding />
             </state>
           </provider>
@@ -140,7 +137,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/client/controllersJS/CentreHomeController.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/client/controllersJS/ChatControllerJS.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/client/controllersJS/RightHomeController.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/client/controllersJS/ShowInterestPageController.js" />
@@ -187,10 +183,11 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/minifiedProduction/MinifiedService.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/config/application.rb" />
-        <option value="$PROJECT_DIR$/config/deploy.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/show_interests/index.html.erb" />
+        <option value="$PROJECT_DIR$/config/deploy.rb" />
+        <option value="$PROJECT_DIR$/config/recipes/assets.rb" />
       </list>
     </option>
   </component>
@@ -321,6 +318,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recipes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -742,11 +757,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-p451@global/gems/thin-1.5.1/lib/thin/logging.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-p451@global/gems/eventmachine-1.0.3/lib/eventmachine.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1469" column="0" selection-start="56329" selection-end="56329" vertical-scroll-proportion="0.0" vertical-offset="21848" max-vertical-offset="23145" />
@@ -993,13 +1003,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/deploy.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0" vertical-offset="267" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="23" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
@@ -1016,7 +1019,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/show_interests/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="36" selection-start="1594" selection-end="1594" vertical-scroll-proportion="0.70394737" vertical-offset="292" max-vertical-offset="900">
+        <state line="48" column="36" selection-start="1594" selection-end="1594" vertical-scroll-proportion="-17.833334" vertical-offset="292" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/deploy.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/recipes/assets.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.664557" vertical-offset="0" max-vertical-offset="632">
           <folding />
         </state>
       </provider>
