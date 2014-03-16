@@ -13,7 +13,7 @@ gem 'redis'
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
 gem 'ng-rails-csrf'
-gem 'ngmin-rails'
+
 gem 'angularjs-rails'
 gem 'gon'
 #gem 'foundation-datetimepicker-rails'
@@ -110,6 +110,7 @@ group :production do
   gem "net-ssh", "~> 2.7.0"
   gem 'capistrano'
   gem 'actionpack','4.0.0'
+  gem "ngmin-rails", "~> 0.4.0"
 
   gem 'rvm-capistrano'
 end
