@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8766b72-7525-427e-91d5-c240c06bca6b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/recipes/assets.rb" afterPath="$PROJECT_DIR$/config/recipes/assets.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="prototype.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="64" selection-start="2708" selection-end="2708" vertical-scroll-proportion="-17.208334" vertical-offset="592" max-vertical-offset="1200">
+            <state line="60" column="75" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.5065789" vertical-offset="592" max-vertical-offset="1200">
               <folding />
             </state>
           </provider>
@@ -56,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="assets.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="assets.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/recipes/assets.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.664557" vertical-offset="0" max-vertical-offset="632">
+            <state line="28" column="0" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
@@ -184,10 +183,10 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/show_interests/index.html.erb" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
         <option value="$PROJECT_DIR$/config/recipes/assets.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -1010,13 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="64" selection-start="2708" selection-end="2708" vertical-scroll-proportion="-17.208334" vertical-offset="592" max-vertical-offset="1200">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/show_interests/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="36" selection-start="1594" selection-end="1594" vertical-scroll-proportion="-17.833334" vertical-offset="292" max-vertical-offset="900">
@@ -1033,7 +1025,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/recipes/assets.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.664557" vertical-offset="0" max-vertical-offset="632">
+        <state line="28" column="0" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="75" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.5065789" vertical-offset="592" max-vertical-offset="1200">
           <folding />
         </state>
       </provider>
