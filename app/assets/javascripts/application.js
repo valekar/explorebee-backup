@@ -43,7 +43,18 @@
 
 
 
-//=require_directory ./production
+
+//= require_directory ./client/MainModuleJS
+//= require_directory ./client/controllersJS
+//= require_directory ./client/directivesJS
+//= require_directory ./client/servicesJS
+//= require masonry
+//= require places
+//= require posts
+//= require workplaces
+
+
+
 
 
 
