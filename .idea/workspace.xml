@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8766b72-7525-427e-91d5-c240c06bca6b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/client/MainModuleJS/app.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/client/MainModuleJS/app.js" />
     </list>
     <ignored path="prototype.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,19 +92,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/client/MainModuleJS/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="158" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+            <state line="2" column="133" selection-start="187" selection-end="187" vertical-scroll-proportion="0.032258064" vertical-offset="0" max-vertical-offset="930">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="64" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.4139073" vertical-offset="270" max-vertical-offset="1200">
+            <state line="43" column="64" selection-start="1699" selection-end="1699" vertical-scroll-proportion="-15.625" vertical-offset="270" max-vertical-offset="1200">
               <folding />
             </state>
           </provider>
@@ -186,9 +185,9 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/client/servicesJS/StoryServices.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/client/servicesJS/UserServices.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/client/servicesJS/util.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/client/MainModuleJS/app.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/client/MainModuleJS/app.js" />
       </list>
     </option>
   </component>
@@ -1091,16 +1090,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/client/MainModuleJS/app.js">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="158" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+        <state line="43" column="64" selection-start="1699" selection-end="1699" vertical-scroll-proportion="-15.625" vertical-offset="270" max-vertical-offset="1200">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/client/MainModuleJS/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="64" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.4139073" vertical-offset="270" max-vertical-offset="1200">
+        <state line="2" column="133" selection-start="187" selection-end="187" vertical-scroll-proportion="0.032258064" vertical-offset="0" max-vertical-offset="930">
           <folding />
         </state>
       </provider>
