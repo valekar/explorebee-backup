@@ -1,7 +1,7 @@
 var app = angular.module('myApp',
         ['ngRoute',
           'ngResource','ng-rails-csrf','ngCookies','angularFileUpload','app.UtilityServices','infinite-scroll','ratings','ngProgress','ngSanitize'])
-    .config(function($routeProvider){
+    .config(['$routeProvider',function($routeProvider){
         $routeProvider.when("/",{
             //templateUrl:'/angularTemplates/dashboard.html',
             controller:'HomeController'
@@ -19,7 +19,7 @@ var app = angular.module('myApp',
 
         })
             .otherwise({redirectTo: '/'}) ;
-    }).config(['$locationProvider',function($locationProvider){
+    }]).config(['$locationProvider',function($locationProvider){
         // this is used to remove '#' from the URL
         $locationProvider.html5Mode(true);
     }]).
