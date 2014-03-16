@@ -1,5 +1,5 @@
 //trips/new.html
-app.controller("TripCtrl",TripCtrl)
+app.controller("TripCtrl",TripCtrl);
 TripCtrl.$inject = ['$scope','UserServices'];
 
 function TripCtrl($scope,UserServices){
@@ -20,7 +20,7 @@ function TripCtrl($scope,UserServices){
     };
 
     //This is used for the checkbox
-    $scope.userIds=[]
+    $scope.userIds=[];
     $scope.toggleSelection = function toggleSelection(id) {
         var idx = $scope.userIds.indexOf(id);
 
@@ -37,7 +37,7 @@ function TripCtrl($scope,UserServices){
 
 }
     //trips/index.html.erb
-    app.controller("TripIndexCtrl",TripIndexCtrl)
+    app.controller("TripIndexCtrl",TripIndexCtrl);
 TripIndexCtrl.$inject = ['$scope'];
 
 function TripIndexCtrl($scope){
@@ -50,15 +50,15 @@ function TripIndexCtrl($scope){
         $scope.join = function(id){
             $scope.acceptance = !$scope.acceptance;
             $scope.unjoinToggleOut = !$scope.unjoinToggleOut
-        }
+        };
 
         $scope.unjoin = function(id){
             $scope.joinToggleOut = !$scope.joinToggleOut;
             $scope.acceptance = !$scope.acceptance;
-        }
+        };
 
         //$scope.trip = [];
-        $scope.trips = gon.trips
+        $scope.trips = gon.trips;
           // $scope.ss = "asdsa";
 
 

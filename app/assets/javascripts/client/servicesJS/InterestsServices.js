@@ -15,7 +15,7 @@ function AddInterestService($resource){
             var url = "/interestship";
             return $resource(url);
         }
-    }
+    };
 
     return service;
 
@@ -28,6 +28,6 @@ function GetInterestsService($http){
             getInterest:function(){
                 return $http.get("/show_interests/get_index");
             }
-        }
+        };
         return service;
     }

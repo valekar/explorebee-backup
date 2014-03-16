@@ -1,3 +1,4 @@
+/*
 app.controller("ActivityCtrl",ActivityCtrl);
 
 ActivityCtrl.$inject = ['$scope','ActivityIndexService','ActivityOtherUserService','VoteUrlService','CommentUrlService'];
@@ -11,8 +12,8 @@ function ActivityCtrl($scope,ActivityIndexService,ActivityOtherUserService,VoteU
 
 
 
-    $scope.activities = []
-    $scope.usersDetails = []
+    $scope.activities = [];
+    $scope.usersDetails = [];
    $scope.myPagingFunction = function(){
        counter += 1;
        if(flag){
@@ -27,9 +28,11 @@ function ActivityCtrl($scope,ActivityIndexService,ActivityOtherUserService,VoteU
                angular.forEach(activities,function(value,key){
 
                       $scope.activities.push(value);
-                  /* angular.forEach(value,function(value1,key){
+                  */
+/* angular.forEach(value,function(value1,key){
                        console.log(value1);
-                   })*/
+                   })*//*
+
 
                     //var user = ActivityUserService.getUser(value.user_id);
                    if(value.trackable_type!="Comment"){
@@ -44,7 +47,7 @@ function ActivityCtrl($scope,ActivityIndexService,ActivityOtherUserService,VoteU
            });
        }
 
-   }
+   };
 
     //Here we are passing userDetail only for model,id purpose....the commenting person is different
 
@@ -52,7 +55,7 @@ function ActivityCtrl($scope,ActivityIndexService,ActivityOtherUserService,VoteU
 
         var comment = {
             content:userDetail.commentIt
-        }
+        };
         var model = userDetail.feedModel;
         var id = userDetail.feed.id;
         var Comment = CommentUrlService.getUrl(model,id);
@@ -83,7 +86,7 @@ function ActivityCtrl($scope,ActivityIndexService,ActivityOtherUserService,VoteU
 
         var vote = {
             type:type
-        }
+        };
         var model = userDetail.feedModel;
         var id = userDetail.feed.id;
         var Vote = VoteUrlService.vote(model,id);
@@ -96,4 +99,4 @@ function ActivityCtrl($scope,ActivityIndexService,ActivityOtherUserService,VoteU
     }
 
 
-}
+}*/

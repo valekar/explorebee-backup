@@ -14,7 +14,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
         PhotoService.getPhoto().success(function(data){
             $scope.myPhoto =  data;
         });
-    }
+    };
 
 
 
@@ -44,7 +44,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
         else{
             alert("Hi, there, we didn't think you are having nothing");
         }
-    }
+    };
    //***********************************************************************************************************//
     //method for comment section
 
@@ -52,7 +52,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
 
       var comment = {
           content:micropost.commentIt
-      }
+      };
        var model = "microposts";
         var id = micropost.micropost.id;
        var Comment = CommentUrlService.getUrl(model,id);
@@ -71,7 +71,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
 
            var vote = {
                type:"up"
-           }
+           };
          var model = "microposts";
          var id = micropost.micropost.id;
          var Vote = VoteUrlService.vote(model,id);
@@ -80,7 +80,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
 
          $scope.vote = voted;
 
-     }
+     };
 
 
     //***********************************************************************************************************//
@@ -89,7 +89,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
     $scope.onFileSelect = function($files){
         PhotoUploadService.uploadPhoto($files,$scope.myModelObj,$scope.upload);
         $scope.datas = PhotoUploadService.getUploadedDatas();
-    }
+    };
     //**********************************************************************************************************//
 
     //this is used for angular file upload
@@ -97,19 +97,19 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
 
     $scope.toggleUpload = function(){
         $scope.flag2 = true;
-    }
+    };
     //this is where the file attachment takes place
     $scope.onFileAttach = function($files){
         FileUploadService.attachFile($files,$scope.description,$scope.upload,$scope.interestIds);
         $scope.attachments = FileUploadService.getUploadedAttachment();
         $scope.description = " ";
         $scope.fileAttach = " ";
-    }
+    };
     //comment part for the file attachment section
     $scope.attachmentComment = function(attachment){
         var comment = {
             content:attachment.commentIt
-        }
+        };
         var model = "attachments";
         var id = attachment.getFiles.id;
 
@@ -129,7 +129,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
 
         $scope.toggleVideoUpload = function(){
             $scope.flag4 = true;
-        }
+        };
         //this is where the file attachment takes place
         $scope.onVideoAttach = function($files){
 
@@ -143,13 +143,13 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
             $scope.videoAttachs = VideoUploadService.getUploadedAttachment();
             $scope.videoDesc = " ";
             //$scope.fileAttach = " ";
-        }
+        };
 
         //comment part for the file attachment section
         $scope.videoComment = function(vadeo){
             var comment = {
                 content:vadeo.commentIt
-            }
+            };
             var model = "video_attachments";
             var id = vadeo.getFiles.id;
 
@@ -186,7 +186,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
 
             })
             }
-        }
+        };
         $scope.isDisabled = {};
         $scope.toggleInterest = function(id){
             $scope.interestIds.push(id);
@@ -199,7 +199,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
 
 //This one is for showing the activities/notifications, I have moved the code from the activity page to this page
 
-app.controller("ActivityCtrl",ActivityCtrl)
+app.controller("ActivityCtrl",ActivityCtrl);
 ActivityCtrl.$inject =['$scope','ActivityIndexService','ActivityOtherUserService','VoteUrlService','CommentUrlService'];
     function ActivityCtrl($scope,ActivityIndexService,ActivityOtherUserService,VoteUrlService,CommentUrlService){
     var counter = 0;
@@ -210,8 +210,8 @@ ActivityCtrl.$inject =['$scope','ActivityIndexService','ActivityOtherUserService
 
 
 
-    $scope.activities = []
-    $scope.usersDetails = []
+    $scope.activities = [];
+    $scope.usersDetails = [];
     $scope.myPagingFunction = function(){
         counter += 1;
         if(flag){
@@ -243,14 +243,14 @@ ActivityCtrl.$inject =['$scope','ActivityIndexService','ActivityOtherUserService
             });
         }
 
-    }
+    };
 
     //Here we are passing userDetail only for model,id purpose....the commenting person is different
 
     $scope.comment = function(userDetail){
         var comment = {
             content:userDetail.commentIt
-        }
+        };
         var model = userDetail.feedModel;
         var id = userDetail.feed.id;
         var Comment = CommentUrlService.getUrl(model,id);

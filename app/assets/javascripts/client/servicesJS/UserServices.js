@@ -14,7 +14,7 @@ function UserServices($resource,$http){
                  return $resource("/users/relate/:id.json", {id:"@id"})
              }
 
-          }
+          };
 
     return service;
 }

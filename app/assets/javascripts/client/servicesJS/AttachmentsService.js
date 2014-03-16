@@ -41,8 +41,8 @@ function FileUploadService($upload){
     }
 
 }
-    app.factory("VideoUploadService",VideoUploadService)
-VideoUploadService.$inject = ['$upload','ngProgress','$timeout']
+    app.factory("VideoUploadService",VideoUploadService);
+VideoUploadService.$inject = ['$upload','ngProgress','$timeout'];
 
 function VideoUploadService($upload,ngProgress,$timeout){
         var datas = [];
@@ -111,7 +111,7 @@ function GetVideosService($http){
             getVideoUrl:function(){
                 return $http.get("/get_videos");
             }
-        }
+        };
         return service;
     }
 

@@ -5,7 +5,7 @@ function VideoCtrl($scope,$window,GetVideosService){
    $window.onload = function(){
         //alert("hello world");
           $scope.videos=[];
-          $scope.videosDetail = []
+          $scope.videosDetail = [];
        GetVideosService.getVideoUrl().success(function(data){
 
             // I got the object like this [[[]]] so using three loops

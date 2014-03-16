@@ -86,7 +86,7 @@ function VoteUrlService($resource){
                     return $resource("/attachments/vote_video_attachment");
                 }
 
-            }
+            };
 
             return service;
         }
@@ -115,7 +115,7 @@ function flowPlayerService(){
                         }
                     });
                 }
-            }
+            };
 
             return service;
         }
@@ -176,7 +176,7 @@ function SuggestionServices($http){
                 getFriendSuggestions:function(){
                     return $http.get("/utility/getSuggestions");
                 }
-            }
+            };
             return service;
         }
 

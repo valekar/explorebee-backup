@@ -1,5 +1,5 @@
 app.directive("datepickers",datepickers);
-datepickers.$inject =[]
+datepickers.$inject =[];
 
 function datepickers(){
     return {

@@ -22,7 +22,7 @@ function PlaceServices($http){
             }
 
 
-        }
+        };
 
         return service;
 
@@ -36,7 +36,7 @@ function PlaceFavouriteService($http){
         getPlaceUrl:function(id){
             return $http.get("/places/favourite?place="+id);
             }
-        }
+        };
 
         return service;
 

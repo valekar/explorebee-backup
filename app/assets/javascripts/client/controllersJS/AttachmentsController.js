@@ -1,6 +1,6 @@
-app.controller("AttachmentCtrl",AttachmentCtrl)
+app.controller("AttachmentCtrl",AttachmentCtrl);
 
-AttachmentCtrl.$inject = []
+AttachmentCtrl.$inject = [];
 function AttachmentCtrl(){
 
 }

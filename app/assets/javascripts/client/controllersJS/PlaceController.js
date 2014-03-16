@@ -68,7 +68,7 @@ function PlaceShowCtrl($scope,StoryServices,PlaceDetailServices){
         //alert("ads");
         //$scope.user_rating = 2;
         //passed from the controller
-        $scope.current_user_id = gon.user_id
+        $scope.current_user_id = gon.user_id;
 
         //pased from the controller
         if(gon.rating){
@@ -98,11 +98,11 @@ function PlaceShowCtrl($scope,StoryServices,PlaceDetailServices){
                 story_name:$scope.story_name,
                 story_description:$scope.story_description,
                 place_id:placeId
-            }
+            };
 
           story = StoryServices.setStoryUrl().save(story);
 
-      }
+      };
 
         // for getting more details
         $scope.detailDescription = null;
@@ -125,7 +125,7 @@ function PlaceShowCtrl($scope,StoryServices,PlaceDetailServices){
 
     //Used in places/index.html.erb
     app.controller("PlaceNewController",PlaceNewController);
-PlaceNewController.$inject = ['$scope','PlaceVideoUploadService']
+PlaceNewController.$inject = ['$scope','PlaceVideoUploadService'];
 
 function PlaceNewController($scope,PlaceVideoUploadService){
         $scope.onVideoAttach = function($files,placeId){
@@ -150,7 +150,7 @@ function PlaceUnsignedCtrl($scope,UnsignedPlaceServices){
         UnsignedPlaceServices.getRecentPlaces().success(function(data){
             $scope.places.push(data);
         });
-    }
+    };
 
 
 
