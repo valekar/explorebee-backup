@@ -5,6 +5,14 @@ GIT
     database_cleaner (1.2.0)
 
 GIT
+  remote: git://github.com/jasontorres/foundation-icons-sass-rails.git
+  revision: 29671928b10902b78476d0ba29092fc55fa51014
+  specs:
+    foundation-icons-sass-rails (2.0.0)
+      railties (>= 3.1.1)
+      sass-rails (>= 3.1.1)
+
+GIT
   remote: git://github.com/ryanb/private_pub.git
   revision: 7ad77617b1f48980d6f114bc96018f2964a07bdc
   specs:
@@ -131,9 +139,6 @@ GEM
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.3.1)
     ffi (1.9.3)
-    foundation-icons-sass-rails (3.0.0)
-      railties (>= 3.1.1)
-      sass-rails (>= 3.1.1)
     friendly_id (5.0.3)
       activerecord (>= 4.0.0)
     gherkin (2.12.2)
@@ -352,7 +357,7 @@ DEPENDENCIES
   factory_girl_rails (= 4.2.0)
   faker (= 1.1.2)
   faye
-  foundation-icons-sass-rails
+  foundation-icons-sass-rails!
   friendly_id
   gon
   jbuilder (= 1.0.2)
