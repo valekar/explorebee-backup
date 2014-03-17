@@ -106,8 +106,9 @@ function VideoUploadService($upload,ngProgress,$timeout){
                     ngProgress.complete();
                     console.log(data);
                     datas.push(data);
-                    alert("uploded successfully");
                     ngProgress.stop();
+                    //alert("uploded successfully");
+
                     //using foundations reveal modal
                     $('.close-reveal-modal',closeVideoModal).click();
                 }).error(function(data, status, headers, config) {
@@ -185,8 +186,7 @@ function PlaceVideoUploadService($upload){
 
     }
 
-}
-app.factory("MessageService",MessageService);
+}app.factory("MessageService",MessageService);
 
 MessageService.$inject = ['$resource'];
 function MessageService($resource){
@@ -197,8 +197,7 @@ function MessageService($resource){
 
     return service;
 
-}
-//this one is used for commenting
+}//this one is used for commenting
 app.factory("CommentUrlService",CommentUrlService);
 
 
@@ -248,8 +247,7 @@ function GetInterestsService($http){
         }
     };
     return service;
-}
-app.factory("Micropost",Micropost);
+}app.factory("Micropost",Micropost);
 Micropost.$inject = ['$resource'];
 
 
@@ -261,41 +259,6 @@ function Micropost($resource){
     return Micropost;
 }
 
-
-
-app.factory("AddInterestService",AddInterestService);
-
-
-AddInterestService.$inject = ['$resource'];
-function AddInterestService($resource){
-    /*  var AddInterest = $resource('interestship/:id.json',
-     {id:'@id'},
-     {}
-     );
-     return AddInterest;
-     */
-
-    var service = {
-        interestUrl:function(){
-            var url = "/interestship";
-            return $resource(url);
-        }
-    };
-
-    return service;
-
-}
-app.factory("GetInterestsService",GetInterestsService);
-GetInterestsService.$inject = ['$http'];
-
-function GetInterestsService($http){
-    var service = {
-        getInterest:function(){
-            return $http.get("/show_interests/get_index");
-        }
-    };
-    return service;
-}
 
 
 app.factory("PlaceServices",PlaceServices);
@@ -386,9 +349,7 @@ function StoryServices($resource){
     };
 
     return service;
-}
-
-app.factory("TripServices",TripServices);
+}app.factory("TripServices",TripServices);
 TripServices.$inject = ['$resource'];
 
 function TripServices($resource){
@@ -398,9 +359,7 @@ function TripServices($resource){
         }
     };
     return service;
-}
-
-app.factory("UserServices",UserServices);
+}app.factory("UserServices",UserServices);
 UserServices.$inject = ['$resource','$http'];
 function UserServices($resource,$http){
     var service = {
@@ -419,12 +378,9 @@ function UserServices($resource,$http){
     };
 
     return service;
-}
+}//var op = angular.module("app.UtilityServices",[]);
 
-
-var op = angular.module("app.UtilityServices",[]);
-
-op.factory("PhotoService",PhotoService);
+app.factory("PhotoService",PhotoService);
 
 PhotoService.$inject = ['$http'];
 function PhotoService($http){
@@ -435,7 +391,7 @@ function PhotoService($http){
     }
 }
 
-op.factory("CurrentUserService",CurrentUserService);
+app.factory("CurrentUserService",CurrentUserService);
 
 CurrentUserService.$inject = ['$http'];
 function CurrentUserService($http){

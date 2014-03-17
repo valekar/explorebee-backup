@@ -24,12 +24,12 @@ function flow(){
             });
         },
 
-        controller:function($scope){
+        controller:['$scope',function($scope){
             $scope.showcast = null;
             $scope.showVideo=function(url){
                 $scope.showcast = url
             }
-        }
+        }]
 
     }
 }

@@ -4,7 +4,6 @@ AttachmentCtrl.$inject = [];
 function AttachmentCtrl(){
 
 }
-
 app.
     controller('CentreHomeController',CentreHomeController);
 
@@ -324,7 +323,8 @@ function ActivityCtrl($scope,ActivityIndexService,ActivityOtherUserService,VoteU
 
 
 
-app.controller("ChatCtrl", ChatCtrl);
+
+app.controller("ChatCtrl", ChatCtrl)
 
 ChatCtrl.$inject = ['$scope','MessageService'];
 
@@ -346,8 +346,7 @@ function ChatCtrl($scope,MessageService){
         //alert(message);
 
     }
-}
-app.controller("LeftHomeController",LeftHomeController);
+}app.controller("LeftHomeController",LeftHomeController);
 LeftHomeController.$inject = ['$scope','ProfilePhotoUploadService'];
 
 
@@ -367,8 +366,6 @@ function LeftHomeController($scope,ProfilePhotoUploadService){
         $scope.togglePhoto2 = true;
     }
 }
-
-
 //used in signed_index.html.erb in places
 app.controller("PlaceCtrl",PlaceCtrl);
 
@@ -431,8 +428,8 @@ function PlaceCtrl($scope,$window,PlaceFavouriteService,PlaceServices,$timeout){
 
 //used for place/show.html.erb in places
 app.controller("PlaceShowCtrl",PlaceShowCtrl);
-PlaceShowCtrl.$inject = ['$scope','StoryServices'];
-function PlaceShowCtrl($scope,StoryServices){
+PlaceShowCtrl.$inject = ['$scope','StoryServices','PlaceDetailServices'];
+function PlaceShowCtrl($scope,StoryServices,PlaceDetailServices){
     var flag = false;
     var userCounter =0;
     $scope.toggle = false;
@@ -452,6 +449,9 @@ function PlaceShowCtrl($scope,StoryServices){
     //passed from the controller(gon variables are declared in the controller)
     var trackable_type = gon.type;
     var trackable_id  = gon.id;
+
+
+
     //console.log(type+" rating "+$scope.user_rating+" trackable_id="+id);
 
     //this is a universal rating routing url
@@ -476,9 +476,10 @@ function PlaceShowCtrl($scope,StoryServices){
     $scope.detailDescription = null;
     $scope.detailShow = false;
     $scope.getPlaceDetails = function(){
+        //console.log("asdasdasdasdasdadsdasdas"+gon.id);
         PlaceDetailServices.getDetailDescription(trackable_id).success(function(data){
             $scope.detailDescription = data;
-            console.log($scope.detailDescription);
+            //console.log($scope.detailDescription);
             $scope.detailShow = true;
         });
 
@@ -507,7 +508,7 @@ function PlaceNewController($scope,PlaceVideoUploadService){
 }
 
 app.controller("PlaceUnsignedCtrl",PlaceUnsignedCtrl);
-PlaceUnsignedCtrl.$inject=["$scope","UnsignedPlaceServices"];
+PlaceUnsignedCtrl.$inject=['$scope','UnsignedPlaceServices'];
 
 function PlaceUnsignedCtrl($scope,UnsignedPlaceServices){
 
@@ -576,8 +577,7 @@ function RightHomeController($scope,SuggestionServices,UserServices){
     }
 
 
-}
-app.controller("SearchCtrl",SearchCtrl);
+}app.controller("SearchCtrl",SearchCtrl);
 SearchCtrl.$inject = ['$scope',"$window"];
 
 function SearchCtrl($scope,$window){
@@ -600,14 +600,13 @@ function SearchCtrl($scope,$window){
 
      }
      */
-}
-app.controller("InterestsCtrl",InterestsCtrl);
+}app.controller("InterestsCtrl",InterestsCtrl);
 InterestsCtrl.$inject = ['$window','$scope','AddInterestService','UserServices'];
 function InterestsCtrl($window,$scope,AddInterestService,UserServices){
 
     $scope.interstIds = [];
-    $scope.currentUser = $window.user;
-
+    $scope.currentUser = $window.user
+    ;
     var user_id = gon.user_id;
     $scope.isDisabled = {};
     $scope.addInterest = function(interestId){
@@ -673,9 +672,7 @@ function InterestsCtrl($window,$scope,AddInterestService,UserServices){
 
 
 
-}
-
-//trips/new.html
+}//trips/new.html
 app.controller("TripCtrl",TripCtrl);
 TripCtrl.$inject = ['$scope','UserServices'];
 
@@ -748,9 +745,7 @@ function TripIndexCtrl($scope){
     //var button = angular.element("#button")
 
 
-}
-
-app.controller("VideoCtrl",VideoCtrl);
+}app.controller("VideoCtrl",VideoCtrl);
 VideoCtrl.$inject = ['$scope','$window','GetVideosService'];
 
 function VideoCtrl($scope,$window,GetVideosService){

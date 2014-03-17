@@ -42,8 +42,6 @@
 
 
 
-
-
 //= require_directory ./client/MainModuleJS
 //= require_directory ./client/controllersJS
 //= require_directory ./client/directivesJS
@@ -52,7 +50,6 @@
 //= require places
 //= require posts
 //= require workplaces
-
 
 
 

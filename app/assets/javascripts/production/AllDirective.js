@@ -29,149 +29,6 @@ function datepickers(){
         }
     }
 }
-
-/*
- app.directive("myflowplayer",function(GetVideosService,flowPlayerService){
- return {
- template:"<a href= '' style='display:block;width:200px;height:150px;'id='player'></a>",
- scope:{
- url:"@"
- },
- link:function(scope,ele,attr){
- console.log(ele.children()[0]);
- //console.log(attr.url);
-
- var anc = ele.children()[0];
-
- scope.$watch("url",function(newval,oldval){
-
- console.log(newval);
- //console.log(oldval);
- url = newval;
-
- scope.url = newval;
-
-
-
-
- ele.flowplayer({
- clip:  {
- autoPlay: false,
- autoBuffering: true
- },
- plugins: { // load one or more plugins
- controls: { // load the controls plugin
-
- // always: where to find the Flash object
- url: '/flowplayer.controls-tube-3.2.15.swf'
- // display properties
- ,
- tooltips: { // this plugin object exposes a 'tooltips' object
- buttons: true,
- fullscreen: 'Enter Fullscreen mode'
- }
- }
- }
- });
-
-
- //anc.prop('href',url);
- });
-
-
-
-
- }
-
- }
- });
- */
-
-/*
- app.directive("flowplayer",function(){
- return {
- scope:{
- url:"@"
- },
- link:function(scope,element,attr){
-
- return scope.$watch("url",function(newval,oldval){
-
- console.log(newval);
- //console.log(oldval);
-
-
- scope.url = newval;
-
- if(scope.url){
- return element.flowplayer({
- playlist : [
- [
- {
- mp4:scope.url
- }
-
- ]
-
- ],
- ratio: 9/14
- })
- }
-
-
- })
- }
- }
- })*/
-/*
-
- app.directive("flow",function(){
- return {
- scope:{
- url:"@",
- ims:"@"
- },
- link:function(scope,element,attr){
-
- element.bind("click",function(){
- element.flowplayer(this,"/flowplayer.swf",{
-
- clip: {url:scope.url,
- autoPlay: true,
- autoBuffering: true},
- ratio:9/14,
- controls :{
-
- }
-
-
- })
-
- })
- }
- }
- }) ;
-
- app.directive('flowPlayer', function() {
- return function(scope, element, attrs) {
- return scope.$watch('name', function(screencast) {
- if (screencast) {
- return element.flowplayer("player", "/flowplayer_html5.swf",{
- playlist: [
- [
- {
- mp4: screencast
- }
- ]
- ],
- ratio: 9 / 14
- });
- }
- });
- };
- });
- */
-
 app.directive("flow",flow);
 flow.$inject = [];
 function flow(){
@@ -197,12 +54,12 @@ function flow(){
             });
         },
 
-        controller:function($scope){
+        controller:['$scope',function($scope){
             $scope.showcast = null;
             $scope.showVideo=function(url){
                 $scope.showcast = url
             }
-        }
+        }]
 
     }
 }
@@ -233,8 +90,7 @@ function orbitdirective(){
         restrict:'A',
         link:linker
     }
-}
-/* ng-infinite-scroll - v1.0.0 - 2013-02-23 */
+}/* ng-infinite-scroll - v1.0.0 - 2013-02-23 */
 var mod;
 
 mod = angular.module('custom-scroll', []);
