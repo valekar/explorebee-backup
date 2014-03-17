@@ -1,6 +1,6 @@
 require "bundler/capistrano"
 load 'deploy/assets'
-#load "config/recipes/assets"
+load "config/recipes/assets"
 
 
 
@@ -53,6 +53,7 @@ namespace :deploy do
 
   task :symlink_config, roles: :app do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/uploads #{release_path}/public/uploads"
   end
   after "deploy:finalize_update", "deploy:symlink_config"
 
@@ -64,15 +65,37 @@ namespace :deploy do
       exit
     end
   end
-#before "deploy", "deploy:check_revision"
- # namespace :carrierwave do
-  #task :symlink, roles: :app do
-   # run "ln -nfs #{shared_path}/uploads/ #{release_path}/public/uploads"
-  #end
-  #after "deploy:finalize_update", "carrierwave:symlink"
-  #end
-  
+=begin
+before "deploy", "deploy:check_revision"
+  namespace :carrierwave do
+  task :symlink, roles: :app do
+   run "ln -nfs #{shared_path}/uploads/ #{release_path}/public/uploads"
+  end
+  after "deploy:finalize_update", "carrierwave:symlink"
+  end
+=end
+
+
+
+=begin
+  namespace :carrierwave do
+    task :uploads_folder do
+      run "mkdir -p #{shared_path}/uploads"
+      run "#{sudo} chmod 775 #{shared_path}/uploads"
+    end
+    after 'deploy:setup', 'carrierwave:uploads_folder'
+
+    task :symlink do
+      run "ln -nfs #{shared_path}/uploads #{release_path}/public/uploads"
+    end
+    after 'deploy', 'carrierwave:symlink'
+  end
+=end
+
+
+
 end
+
 
 
 require "rvm/capistrano"
