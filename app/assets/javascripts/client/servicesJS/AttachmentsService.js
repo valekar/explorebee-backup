@@ -48,9 +48,10 @@ function VideoUploadService($upload,ngProgress,$timeout){
         var datas = [];
         return {
             attachFile : function($files,myModelObj,upload,interestIds,closeVideoModal) {
+                $('.close-reveal-modal',closeVideoModal).click();
                 ngProgress.color('white');
                 ngProgress.height('2em');
-
+                ngProgress.start();
                 //$files: an array of files selected, each file has name, size, and type.
                 for (var i = 0; i < $files.length; i++) {
                     var $file = $files[i];
@@ -64,7 +65,7 @@ function VideoUploadService($upload,ngProgress,$timeout){
                         //fileFormDataName: myFile,
                         progress: function(evt) {
 
-                            ngProgress.start();
+
                            // $timeout(ngProgress.complete(), 1000);
 
                            // console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
@@ -76,13 +77,13 @@ function VideoUploadService($upload,ngProgress,$timeout){
                             // file is uploaded successfully
 
                          ngProgress.complete();
-                            console.log(data);
+                          //  console.log(data);
                             datas.push(data);
                             ngProgress.stop();
                             //alert("uploded successfully");
 
                         //using foundations reveal modal
-                        $('.close-reveal-modal',closeVideoModal).click();
+
                         }).error(function(data, status, headers, config) {
                             // file is uploaded successfully
                         alert("Sorry couldn't upload");

@@ -23,6 +23,8 @@ class UsersController < ApplicationController
 
     if @model === 'Micropost'
       @feed = Micropost.where(id:params[:trackable_id],user_id:params[:user_id]).first
+      p "MMIIIIIIICCCCCRRROoOO VVVOOOOOTTTTEEESssss"
+      p @feed.reputation_for(:votes).to_i
       @comments = @feed.comments
     end
 
@@ -33,6 +35,8 @@ class UsersController < ApplicationController
 
     if @model === "VideoAttachment"
       @feed = @other_user.video_attachments.where(id:params[:trackable_id]).first
+      p " VVVVIIIIIIDDEEEOOO VVVOOOOOTTTTEEESssss"
+      p @feed.reputation_for(:votes).to_i
       @comments = @feed.comments
     end
 
@@ -63,6 +67,12 @@ class UsersController < ApplicationController
       }
     end
   end
+
+
+
+
+
+
 
 
   def new

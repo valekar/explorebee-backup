@@ -3,6 +3,7 @@
 <div class="large-2 columns panel">
   <script>
       window.user ='<%=@user.name%>';
+      window.current_user_id = '<%=@user.id%>'
 
   </script>
 
@@ -22,6 +23,8 @@
     </div>
     <div ng-show="togglePhoto2">
       <img ng-src="{{profile_photo[0].photo_url}}"  alt="interestPhoto"  />
+
+
 
     </div>
     <h4 class="push-3">
@@ -293,6 +296,9 @@
                   <!--This is for the micropost contents-->
                   <span class="content" ng-bind="userDetail.feed.content">  </span>
                   <!--This is for the attachments-->
+                  <div ng-if="currentUserId == userDetail.otherUser.id">
+                     <button class="right tiny" ng-click="removeUserDetail(userDetail,$index)"><i class="fi-x large"></i></button>
+                  </div>
                   <div ng-show="userDetail.feedModel == 'attachments' ">
                     Description :: <span class="description" ng-bind="userDetail.feed.description"></span>
                     <a ng-href = "{{userDetail.feed.file.url}}">Download</a>

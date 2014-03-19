@@ -31,6 +31,18 @@ Prototype::Application.configure do
   config.assets.compile = false
   config.assets.js_compressor = Uglifier.new(mangle: false)
 
+  config.action_mailer.smtp_settings = {
+      :authentication => :plain,
+      :address => "smtp.mailgun.org",
+      :port => 587,
+      :domain => "explorebee.mailgun.org",
+      :user_name => "postmaster@explorebee.com",
+      :password => "1ag7hcat9va6"
+  }
+
+
+
+
   # Generate digests for assets URLs.
   config.assets.digest = true
 

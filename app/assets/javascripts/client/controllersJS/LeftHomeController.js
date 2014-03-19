@@ -10,10 +10,17 @@ function LeftHomeController($scope,ProfilePhotoUploadService){
     $scope.togglePhoto1 = true;
     $scope.togglePhoto2 = false;
 
-    $scope.onPhotoAttach = function($files){
-        ProfilePhotoUploadService.uploadPhoto($files);
-        $scope.profile_photo = ProfilePhotoUploadService.getUploadedDatas();
 
+    //sending the modal id for closing
+    var closePicModal = angular.element("#changePicAttachment");
+
+
+    $scope.onPhotoAttach = function($files){
+
+        ProfilePhotoUploadService.uploadPhoto($files,closePicModal);
+
+        var ass = ProfilePhotoUploadService.getUploadedDatas();
+        $scope.profile_photo = ass;
         $scope.togglePhoto1 = false;
         $scope.togglePhoto2 = true;
     }

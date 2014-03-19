@@ -2,7 +2,7 @@ class VideoAttachment < ActiveRecord::Base
   #belongs_to :attachable
 
 
-  attr_accessible :description,:file
+  attr_accessible :description,:file,:remove_file
   belongs_to :attachable,polymorphic: true
 
   has_many :comments, as: :commentable, dependent: :destroy

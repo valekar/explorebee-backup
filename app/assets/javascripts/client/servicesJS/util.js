@@ -121,13 +121,17 @@ function flowPlayerService(){
         }
         app.factory("ProfilePhotoUploadService",ProfilePhotoUploadService);
 
-ProfilePhotoUploadService.$inject = ['$upload'];
-function ProfilePhotoUploadService($upload){
+ProfilePhotoUploadService.$inject = ['$upload','ngProgress'];
+function ProfilePhotoUploadService($upload,ngProgress){
             var datas = [];
+
             return {
 
 
-                uploadPhoto : function($files,myModelObj,upload) {
+                uploadPhoto : function($files,upload,closePicModal) {
+                    ngProgress.color('white');
+                    ngProgress.height('2em');
+                    ngProgress.start();
                     //$files: an array of files selected, each file has name, size, and type.
                     for (var i = 0; i < $files.length; i++) {
                         var $file = $files[i];
@@ -135,20 +139,28 @@ function ProfilePhotoUploadService($upload){
                             url: '/user/profile_upload',
                             // method: POST or PUT,
                             // headers: {'headerKey': 'headerValue'}, withCredential: true,
-                            data: {myObj: myModelObj},
+                           // data: {myObj: myModelObj},
                             file: $file,
                             //(optional) set 'Content-Desposition' formData name for file
                             //fileFormDataName: myFile,
                             progress: function(evt) {
-                                //console.log('percent: ' );
 
-                                alert("uploading.....")
+                                ngProgress.set(parseInt(100.0 * evt.loaded / evt.total));
                             }
                         }).success(function(data, status, headers, config) {
                                 // file is uploaded successfully
                                // console.log(data);
+                                  if(datas.length !=0){
+                                      datas.pop();
+
+                                  }
                                 datas.push(data);
-                              //  alert("uploded successfully" +data);
+                               // alert("uploded successfully" );
+                            ngProgress.complete();
+                            //console.log(data);
+                            //datas.push(data);
+                            ngProgress.stop();
+                            $('.close-reveal-modal',closePicModal).click();
 
                             }).error(function(data, status, headers, config) {
                                 // file is uploaded successfully

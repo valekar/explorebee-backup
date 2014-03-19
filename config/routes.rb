@@ -115,7 +115,8 @@
 =end
 
   match '/show_others_details', to:"users#show_others_details",via:"get"
-
+  #remove an activity from the userDetail
+  post "/activities/remove_activity"
   #this is login through different providers
   match '/auth/:provider/callback', to: 'identities#facebook' , via:[:get,:post]
 

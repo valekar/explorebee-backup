@@ -16,7 +16,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
         });
     };
 
-
+    $scope.currentUserId = $window.current_user_id
 
 
     //**********************************************************************************************************//
@@ -68,7 +68,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
 
 
      $scope.onVoteUp = function(micropost){
-
+            console.log(micropost);
            var vote = {
                type:"up"
            };
@@ -138,14 +138,18 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
             var closeVideoModal = angular.element("#videoAttachment");
             VideoUploadService.attachFile($files,$scope.videoDesc,$scope.upload,$scope.interestIds,closeVideoModal);
 
-
+            for(var i = 0;i<$scope.interestIds.length ; i++){
+                $scope.isDisabled[$scope.interestIds[i]]= false;
+            }
 
             $scope.videoAttachs = VideoUploadService.getUploadedAttachment();
             $scope.videoDesc = " ";
             //$scope.fileAttach = " ";
         };
 
-        //comment part for the file attachment section
+        //comment part for the VIDEO attachment section
+
+
         $scope.videoComment = function(vadeo){
             var comment = {
                 content:vadeo.commentIt
@@ -161,6 +165,32 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
             vadeo.comments.push(commentable);
             vadeo.commentIt = " ";
         };
+
+
+
+        // this is for voting the videos
+    $scope.onVoteUp = function(video){
+
+        console.log(video);
+        var model = "video_attachments";
+        var id = video.getFiles.id;
+        var vote = {
+            type:"up",
+            id:id,
+            model:model
+        };
+
+        var Vote = VoteUrlService.voteVideo();
+
+        var voted = Vote.save(vote);
+
+        $scope.vote = voted;
+
+    };
+
+
+
+
 
     //******************************************************************************************************//
 
@@ -200,8 +230,8 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
 //This one is for showing the activities/notifications, I have moved the code from the activity page to this page
 
 app.controller("ActivityCtrl",ActivityCtrl);
-ActivityCtrl.$inject =['$scope','ActivityIndexService','ActivityOtherUserService','VoteUrlService','CommentUrlService'];
-    function ActivityCtrl($scope,ActivityIndexService,ActivityOtherUserService,VoteUrlService,CommentUrlService){
+ActivityCtrl.$inject =['$scope','ActivityIndexService','ActivityOtherUserService','VoteUrlService','CommentUrlService','ActivityRemoveService'];
+    function ActivityCtrl($scope,ActivityIndexService,ActivityOtherUserService,VoteUrlService,CommentUrlService,ActivityRemoveService){
     var counter = 0;
     var obj = [];
     var activities;
@@ -231,6 +261,12 @@ ActivityCtrl.$inject =['$scope','ActivityIndexService','ActivityOtherUserService
                      })*/
 
                     //var user = ActivityUserService.getUser(value.user_id);
+
+                    //here activities contains track_type "comment", so we dont want that . so is the reason we have used if condition
+
+                    //In the below code value.user_id is used for getting the details of the user who has made the activity
+
+
                     if(value.trackable_type!="Comment"){
                         ActivityOtherUserService
                             .getFeed(value.user_id,value.trackable_id,value.trackable_type)
@@ -246,6 +282,7 @@ ActivityCtrl.$inject =['$scope','ActivityIndexService','ActivityOtherUserService
     };
 
     //Here we are passing userDetail only for model,id purpose....the commenting person is different
+        // the commenting person is of course current_user....  ;-)
 
     $scope.comment = function(userDetail){
         var comment = {
@@ -307,6 +344,32 @@ ActivityCtrl.$inject =['$scope','ActivityIndexService','ActivityOtherUserService
             userDetail.vote = voted;
         }
 
+
+
+    }
+
+
+
+
+    $scope.removeUserDetail = function(userDetail,index){
+        var model = userDetail.feedModel;
+        var id = userDetail.feed.id;
+
+        //alert("index "+index);
+
+        $scope.usersDetails.splice(index, 1);
+
+        var Activity = ActivityRemoveService.removeFeed();
+
+
+        var activity = {
+            trackable_id:id,
+            trackable_type:model
+
+        };
+
+
+        var removed = Activity.save(activity);
 
 
     }

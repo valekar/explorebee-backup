@@ -25,4 +25,16 @@ function ActivityOtherUserService($http){
             }
         }
 }
+app.factory("ActivityRemoveService",ActivityRemoveService);
 
+
+ActivityRemoveService.$inject = ['$resource'];
+
+
+function ActivityRemoveService($resource){
+    return {
+        removeFeed:function(){
+            return $resource("/activities/remove_activity");
+        }
+    }
+}

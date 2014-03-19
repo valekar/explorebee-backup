@@ -85,6 +85,10 @@ class AttachmentsController < ApplicationController
      @video = VideoAttachment.find_by(params[:id])
      @video.add_or_update_evaluation(:votes,value,current_user)
 
+     p "vooooottttttesss"
+     p @video.reputation_for(:votes).to_i
+
+
      render status: 200,
             json: {
                 success:true,
