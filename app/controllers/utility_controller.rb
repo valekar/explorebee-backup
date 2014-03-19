@@ -75,7 +75,7 @@ class UtilityController < ApplicationController
 
     value = params[:type] == "up"? 1:0
     model = params[:model].singularize.classify.constantize
-    @model =model.find_by(params[:id])
+    @model =model.find(params[:id])
     p "IDDDD"
     p params[:id]
     @model.add_or_update_evaluation(:votes,value,current_user)
