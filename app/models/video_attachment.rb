@@ -1,7 +1,7 @@
 class VideoAttachment < ActiveRecord::Base
   #belongs_to :attachable
 
-
+  default_scope -> { order('created_at DESC') }
   attr_accessible :description,:file,:remove_file
   belongs_to :attachable,polymorphic: true
 

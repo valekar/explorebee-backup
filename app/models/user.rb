@@ -60,6 +60,11 @@ class User < ActiveRecord::Base
   has_many :affinities
 
 
+
+
+
+  has_many :posts, dependent: :destroy
+
   attr_accessible :remote_image_url,:image,:name,:password,:password_confirmation,:email,:remember_token,:phone,:admin
   mount_uploader :image,ImageUploader
 

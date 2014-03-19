@@ -124,6 +124,10 @@
  match '/utility/getSuggestions', to: 'utility#get_friend_suggestions', via:'get'
 
 
+  # this iss the common url for all the vote
+    post "/utility/commonVote"
+
+
   #search
 
     match "/search/getResults", to: 'search#get_results',via:'post'

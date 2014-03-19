@@ -140,10 +140,10 @@
                 <button class="button tiny" ng-click="onVoteUp(micropost)"> <i class="fi-like" ></i></button>
                 <h6 >{{vote.reputation}} votes</h6>
               </div>
-              <div class="row">
+             <!-- <div class="row">
                 <button class="button tiny" ng-click="onVoteDown(micropost)"> <i class="fi-dislike" ></i></button>
 
-              </div>
+              </div>-->
             </div>
             <div class="large-10 columns pull-1">
               <span class="subheader" > <%=@user.name%> said:: </span>
@@ -183,9 +183,9 @@
                 <button class="button tiny" ng-click="onVoteUp(attachment)"> <i class="fi-like" ></i></button>
                 <h6 >{{vote.reputation}} votes</h6>
               </div>
-              <div class="row">
+              <!--<div class="row">
                 <button class="button tiny" ng-click="onVoteDown(attachment)"> <i class="fi-dislike" ></i></button>
-              </div>
+              </div>-->
             </div>
             <div class="large-10 columns pull-1">
               <h5 ng-bind="attachment.getFiles.description" class="subheader"></h5>
@@ -222,12 +222,12 @@
               </div>
 
               <div class="row">
-                <button class="button tiny" ng-click="onVoteUp(vadeo)"> <i class="fi-like" ></i></button>
-                <h6 >{{vote.reputation}} votes</h6>
+                <button class="button tiny" ng-click="onVideoVoteUp(vadeo)"> <i class="fi-like" ></i></button>
+                <h6 >{{videoVote.reputation}} votes</h6>
               </div>
-              <div class="row">
-                <button class="button tiny" ng-click="onVoteDown(vadeo)"> <i class="fi-dislike" ></i></button>
-              </div>
+            <!--  <div class="row">
+                <button class="button tiny" ng-click="onVideoVoteDown(vadeo)"> <i class="fi-dislike" ></i></button>
+              </div>-->
             </div>
             <div class="large-10 columns pull-1">
               <h5 ng-bind="vadeo.getFiles.description" class="subheader"></h5>
@@ -274,50 +274,68 @@
 
               <!--this is used for showing the microposts-->
               <div ng-repeat="userDetail in usersDetails" class="row">
-
+                <!--*******************************************************************************************************-->
+                <!--This is the common thing -->
                 <div class="large-2 columns">
                   <div class="row">
                     <img border="0" ng-src="{{userDetail.otherUserPhoto}}" alt="UserPhoto" width="38" height="50" class="th"/>
                   </div>
-
+                    <br>
                   <div class="row">
                     <button class="button tiny" ng-click="onVote(userDetail,'up')"> <i class="fi-like" ></i></button>
                     <h6 >{{userDetail.vote.reputation}} votes</h6>
                   </div>
-                  <div class="row">
+                  <!--<div class="row">
                     <button class="button tiny" ng-click="onVote(userDetail,'down')"> <i class="fi-dislike" ></i></button>
-
-                  </div>
+                  </div>-->
                 </div>
+
+                <!--*******************************************************************************************************-->
                 <div class="large-10 columns pull-1">
-
                   <span class="subheader" ng-bind="userDetail.otherUser.name"> said:: </span>
-
                   <!--This is for the micropost contents-->
-                  <span class="content" ng-bind="userDetail.feed.content">  </span>
-                  <!--This is for the attachments-->
-                  <div ng-if="currentUserId == userDetail.otherUser.id">
-                     <button class="right tiny" ng-click="removeUserDetail(userDetail,$index)"><i class="fi-x large"></i></button>
+                  <div ng-show="userDetail.feedModel == 'microposts' ">
+                    <span class="content" ng-bind="userDetail.feed.content">  </span>
                   </div>
+                  <!--***************************************************************************************************-->
+
+                  <div ng-if="currentUserId == userDetail.otherUser.id">
+                     <button class="right tiny" ng-click="removeUserDetail(userDetail,$index)"><i class="fi-x"></i></button>
+                  </div>
+
+
+                  <!--This is for the attachments-->
                   <div ng-show="userDetail.feedModel == 'attachments' ">
                     Description :: <span class="description" ng-bind="userDetail.feed.description"></span>
                     <a ng-href = "{{userDetail.feed.file.url}}">Download</a>
+                    <br>
                     <span class="subheader" ng-bind="userDetail.feed.created_at|date:'h.mm a'">at  </span>
                   </div>
+                  <!--***************************************************************************************************-->
                   <!--This is for video model-->
                   <div ng-show="userDetail.feedModel == 'video_attachments' ">
                     Description :: <span class="description" ng-bind="userDetail.feed.description"></span>
-
-
-                    <!--Video Player-->
+                   <!--Video Player-->
                     <a  id="player" ng-init="showVideo(userDetail.feed.file.url)" class="th" flow=""
                         style="display:block;width:425px;height:300px;" >
                       </a>
-
+                    <br>
                     <span class="subheader" ng-bind="userDetail.feed.created_at|date:'h.mm a'">at  </span>
                   </div>
+                  <!--***************************************************************************************************-->
+                  <!-- This is for the post posted by admin-->
+                  <div ng-show="userDetail.feedModel == 'posts' ">
+                    <!--{{userDetail.feed.postImage.url}}-->
+                    <img ng-src="{{userDetail.feed.postImage.url}}" width="300px" height="300px"/><br>
+                    Description::<span class="description" ng-bind="userDetail.feed.description"></span>
+                    <br>
+                    <span class="subheader" ng-bind="userDetail.feed.created_at|date:'h.mm a'">at  </span>
+
+
+                  </div>
+
                   <hr/>
-                  <!--**********************************-->
+                  <!--****************************************************************************************************-->
                   <!--this part is for comment -->
                   <div ng-repeat="comment in userDetail.comments" class="row">
                     <div class="large-3 columns ">

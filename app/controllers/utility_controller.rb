@@ -68,6 +68,28 @@ class UtilityController < ApplicationController
 
   end
 
+
+
+  def commonVote
+    p "Heelloooo"
+
+    value = params[:type] == "up"? 1:0
+    model = params[:model].singularize.classify.constantize
+    @model =model.find_by(params[:id])
+    p "IDDDD"
+    p params[:id]
+    @model.add_or_update_evaluation(:votes,value,current_user)
+    render status: 200,
+           json: {
+               success:true,
+               value:value,
+               reputation:@model.reputation_for(:votes).to_i
+           }
+
+  end
+
+
+
   private
   def profile_photo_url
     current_user.image_url(:small).to_s

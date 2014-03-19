@@ -18,12 +18,12 @@ class UsersController < ApplicationController
 
   #used for user activities http://webserver:3000/activities
   def show_others_details
-    @other_user = User.find_by(id:params[:user_id])
+    @other_user = User.where(id:params[:user_id]).first
     @model = params[:trackable_type]
 
     if @model === 'Micropost'
-      @feed = Micropost.where(id:params[:trackable_id],user_id:params[:user_id]).first
-      p "MMIIIIIIICCCCCRRROoOO VVVOOOOOTTTTEEESssss"
+      @feed = @other_user.microposts.where(id:params[:trackable_id]).first
+      p "Micropost Votes :: "
       p @feed.reputation_for(:votes).to_i
       @comments = @feed.comments
     end
@@ -35,10 +35,20 @@ class UsersController < ApplicationController
 
     if @model === "VideoAttachment"
       @feed = @other_user.video_attachments.where(id:params[:trackable_id]).first
-      p " VVVVIIIIIIDDEEEOOO VVVOOOOOTTTTEEESssss"
+      p "Video Votes :: "
       p @feed.reputation_for(:votes).to_i
       @comments = @feed.comments
     end
+
+
+    if @model == "Post"
+      p "Inside postttt"
+      @feed = Post.where(id:params[:trackable_id]).first
+      p @feed.reputation_for(:post_votes).to_i
+      @comments = @feed.comments
+      @other_user = User.where(admin:true).first
+    end
+
 
     modified_model = @model.underscore.pluralize
 

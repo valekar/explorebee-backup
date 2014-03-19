@@ -195,6 +195,16 @@ function SuggestionServices($http){
 
 
 
+app.factory("CommonVoteService",CommonVoteService);
+CommonVoteService.$inject=['$resource'];
 
+function CommonVoteService($resource){
+            var service = {
+                commonVote:function(){
+                    return $resource("/utility/commonVote");
+                }
+            };
+        return service;
+}
 
 

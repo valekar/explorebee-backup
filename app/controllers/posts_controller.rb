@@ -17,7 +17,7 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    @post = current_user.posts.build
 
     @interests = Interest.all
 
@@ -30,12 +30,12 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
 
 
     respond_to do |format|
       if @post.save
-
+        track_activity @post
         @post.post_and_interests.create(interest_param) if !interest_param.blank?
 
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -74,7 +74,7 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.find(params[:id])
+      @post = current_user.posts.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
