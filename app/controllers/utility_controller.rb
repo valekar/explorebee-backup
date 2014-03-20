@@ -89,6 +89,14 @@ class UtilityController < ApplicationController
   end
 
 
+  def get_large_photo
+    render status: 200,
+           json:{
+               success:true,
+               url:current_user.image_url(:normal).to_s
+           }
+  end
+
 
   private
   def profile_photo_url

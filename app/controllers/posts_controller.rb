@@ -81,7 +81,7 @@ class PostsController < ApplicationController
 
     #its important that you include interest_tokens inside this post_parmas
     def post_params
-      params.require(:post).permit(:name, :description, :postImage,:interest_tokens)
+      params.require(:post).permit(:name, :description, :postImage,:interest_tokens,:detail_description)
     end
 
     def interest_param

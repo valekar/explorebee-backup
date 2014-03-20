@@ -127,6 +127,7 @@
   # this iss the common url for all the vote
     post "/utility/commonVote"
 
+    get "utility/get_large_photo"
 
   #search
 

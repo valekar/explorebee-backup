@@ -44,7 +44,7 @@ class UsersController < ApplicationController
     if @model == "Post"
       p "Inside postttt"
       @feed = Post.where(id:params[:trackable_id]).first
-      p @feed.reputation_for(:post_votes).to_i
+      p @feed.reputation_for(:votes).to_i
       @comments = @feed.comments
       @other_user = User.where(admin:true).first
     end

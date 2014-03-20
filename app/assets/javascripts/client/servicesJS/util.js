@@ -207,4 +207,15 @@ function CommonVoteService($resource){
         return service;
 }
 
+app.factory("LargeProfilePhotoService",LargeProfilePhotoService);
+LargeProfilePhotoService.$inject = ['$http'];
 
+function LargeProfilePhotoService($http){
+    var service ={
+        getLargePhoto:function(){
+            return $http.get("/utility/get_large_photo");
+        }
+    }
+
+    return service;
+}

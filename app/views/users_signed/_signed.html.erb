@@ -17,16 +17,34 @@
     </div>
 
 
+    <a ng-click="loadImage()" data-reveal-id="loadImage">
+        <div ng-show = "togglePhoto1">
+            <%= image_tag current_user.image_url(:thumb).to_s %>
+        </div>
+    </a>
 
-    <div ng-show = "togglePhoto1">
-    <%= image_tag current_user.image_url(:thumb).to_s %>
+
+
+
+
+    <a ng-click="loadImage()" data-reveal-id="loadImage">
+        <div ng-show="togglePhoto2">
+          <img ng-src="{{profile_photo[0].photo_url}}"  alt="interestPhoto"  />
+        </div>
+    </a>
+
+
+
+    <div id="loadImage" class="reveal-modal medium" data-reveal>
+      <div class="row push-2">
+      <img ng-src={{largePhotoUrl.url}} width="500px" height="500px"/>
+
+      </div>
+      <a class="close-reveal-modal">&#215;</a>
     </div>
-    <div ng-show="togglePhoto2">
-      <img ng-src="{{profile_photo[0].photo_url}}"  alt="interestPhoto"  />
 
 
 
-    </div>
     <h4 class="push-3">
       <%= current_user.name %>
     </h4>
@@ -34,6 +52,12 @@
     <button class="button tiny" data-reveal-id="changePicAttachment">change Pic</button>
     <!-- removed cause of the performance -->
     <%#= render 'shared/stats' %>
+
+
+
+
+
+
   </div>
 </div>
   <%#= render 'shared/micropost_form' %>
@@ -264,7 +288,7 @@
           </div>
 
           <hr>
-
+<!--***********************************************************************************************************************-->
 
           <div ng-controller="ActivityCtrl">
             <div infinite-scroll="myPagingFunction()" >
@@ -278,7 +302,9 @@
                 <!--This is the common thing -->
                 <div class="large-2 columns">
                   <div class="row">
-                    <img border="0" ng-src="{{userDetail.otherUserPhoto}}" alt="UserPhoto" width="38" height="50" class="th"/>
+                    <a ng-href="/users/{{userDetail.otherUser.id}}">
+                      <img border="0" ng-src="{{userDetail.otherUserPhoto}}" alt="UserPhoto" width="38" height="50" class="th"/>
+                    </a>
                   </div>
                     <br>
                   <div class="row">
@@ -292,7 +318,7 @@
 
                 <!--*******************************************************************************************************-->
                 <div class="large-10 columns pull-1">
-                  <span class="subheader" ng-bind="userDetail.otherUser.name"> said:: </span>
+                  <a ng-href="/users/{{userDetail.otherUser.id}}"><span class="subheader" ng-bind="userDetail.otherUser.name"> said:: </span></a>
                   <!--This is for the micropost contents-->
                   <div ng-show="userDetail.feedModel == 'microposts' ">
                     <span class="content" ng-bind="userDetail.feed.content">  </span>
@@ -328,6 +354,7 @@
                     <!--{{userDetail.feed.postImage.url}}-->
                     <img ng-src="{{userDetail.feed.postImage.url}}" width="300px" height="300px"/><br>
                     Description::<span class="description" ng-bind="userDetail.feed.description"></span>
+                    <a ng-href="/posts/{{userDetail.feed.id}}" target="_blank">Read More</a>
                     <br>
                     <span class="subheader" ng-bind="userDetail.feed.created_at|date:'h.mm a'">at  </span>
 

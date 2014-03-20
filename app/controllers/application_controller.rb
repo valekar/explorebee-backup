@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   skip_before_filter :verify_authenticity_token, only: [:sign_in]
 
-  #before_filter :miniprofiler
+  before_filter :miniprofiler
 
 
   rescue_from CanCan::AccessDenied do |exception|

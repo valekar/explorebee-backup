@@ -1,21 +1,26 @@
+
 <p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="large-2"></div>
+  <div class="large-10 columns">
+    <div class="right">
+      <strong>Interest:</strong>
+        <% @post.interests.each do |i| %>
+            <%= i.name %>
+        <% end %>
+    </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @post.name %>
-</p>
+    <p>
+      <strong>Name:</strong>
+      <%= @post.name %>
+    </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
+    <%=image_tag @post.postImage_url(:normal).to_s  %>
 
-<%=image_tag @post.postImage_url(:thumb).to_s  %>
+    <p>
+      <strong>Continued:</strong>
+      <%= @post.detail_description %>
+    </p>
 
-<% @post.interests.each do |i| %>
-    <%= i.name %>
-    <% end %>
-
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+  </div>
+</div>

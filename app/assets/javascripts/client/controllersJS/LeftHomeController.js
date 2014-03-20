@@ -1,14 +1,15 @@
 app.controller("LeftHomeController",LeftHomeController);
-LeftHomeController.$inject = ['$scope','ProfilePhotoUploadService'];
+LeftHomeController.$inject = ['$scope','ProfilePhotoUploadService','LargeProfilePhotoService'];
 
 
-function LeftHomeController($scope,ProfilePhotoUploadService){
+function LeftHomeController($scope,ProfilePhotoUploadService,LargeProfilePhotoService){
     /* $scope.changePic = function(){
 
      }*/
 
     $scope.togglePhoto1 = true;
     $scope.togglePhoto2 = false;
+    $scope.largePhotoUrl = '';
 
 
     //sending the modal id for closing
@@ -24,4 +25,14 @@ function LeftHomeController($scope,ProfilePhotoUploadService){
         $scope.togglePhoto1 = false;
         $scope.togglePhoto2 = true;
     }
+
+
+
+    $scope.loadImage = function(){
+        LargeProfilePhotoService.getLargePhoto().success(function(data){
+           $scope.largePhotoUrl = data;
+        });
+    }
+
+
 }

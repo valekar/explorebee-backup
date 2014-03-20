@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :name,:description,:postImage,:interest_tokens#:interest_ids
+  attr_accessible :name,:description,:postImage,:interest_tokens,:detail_description#:interest_ids
 
 
   mount_uploader :postImage, ImageUploader
