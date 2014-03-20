@@ -15,7 +15,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/public/uploads
+
 =======
 # Build and Object Folders
 bin/
