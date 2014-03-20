@@ -93,7 +93,7 @@ angular.module('akoenig.deckgrid').factory('DeckgridDescriptor', [
 
             if (attrs.cardtemplate === undefined) {
                 if (attrs.cardtemplatestring === undefined) {
-                    // use the provided inner html as template
+                    // use the provided inner html as templates
                     transclude(scope, function onTransclude (innerHTML) {
                         var extractedInnerHTML = [],
                             i = 0,
@@ -111,7 +111,7 @@ angular.module('akoenig.deckgrid').factory('DeckgridDescriptor', [
                         $templateCache.put('innerHtmlTemplate', extractedInnerHTML.join());
                     });
                 } else {
-                    // use the provided template string
+                    // use the provided templates string
                     //
                     // note: the attr is accessed via the elem object, as the attrs content
                     // is already compiled and thus lacks the {{...}} expressions
@@ -120,7 +120,7 @@ angular.module('akoenig.deckgrid').factory('DeckgridDescriptor', [
 
                 scope.cardTemplate = 'innerHtmlTemplate';
             } else {
-                // use the provided template file
+                // use the provided templates file
                 scope.cardTemplate = attrs.cardtemplate;
             }
 
@@ -275,7 +275,7 @@ angular.module('akoenig.deckgrid').factory('Deckgrid', [
          * reference. So if you modify the data within your controller
          * this directive will reflect these changes immediately.
          *
-         * NOTE that calling this method will trigger a complete template "redraw".
+         * NOTE that calling this method will trigger a complete templates "redraw".
          *
          */
         Deckgrid.prototype.$$createColumns = function $$createColumns () {

@@ -89,7 +89,7 @@ describe PlacesController do
         assigns(:place).should be_a_new(Place)
       end
 
-      it "re-renders the 'new' template" do
+      it "re-renders the 'new' templates" do
         # Trigger the behavior that occurs when invalid params are submitted
         Place.any_instance.stub(:save).and_return(false)
         post :create, {:place => { "name" => "invalid value" }}, valid_session
@@ -132,7 +132,7 @@ describe PlacesController do
         assigns(:place).should eq(place)
       end
 
-      it "re-renders the 'edit' template" do
+      it "re-renders the 'edit' templates" do
         place = Place.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Place.any_instance.stub(:save).and_return(false)

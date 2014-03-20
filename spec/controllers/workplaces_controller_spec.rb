@@ -89,7 +89,7 @@ describe WorkplacesController do
         assigns(:workplace).should be_a_new(Workplace)
       end
 
-      it "re-renders the 'new' template" do
+      it "re-renders the 'new' templates" do
         # Trigger the behavior that occurs when invalid params are submitted
         Workplace.any_instance.stub(:save).and_return(false)
         post :create, {:workplace => { "name" => "invalid value" }}, valid_session
@@ -132,7 +132,7 @@ describe WorkplacesController do
         assigns(:workplace).should eq(workplace)
       end
 
-      it "re-renders the 'edit' template" do
+      it "re-renders the 'edit' templates" do
         workplace = Workplace.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Workplace.any_instance.stub(:save).and_return(false)
