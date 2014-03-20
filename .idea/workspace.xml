@@ -10,7 +10,11 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-dc640eaf024f865d0e42a2cd277d6ca0.js.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-e454a27092ff6429f48992073c565ff2.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-e454a27092ff6429f48992073c565ff2.js.gz" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/config/recipes/templates/monit/monitrc.erb" afterPath="$PROJECT_DIR$/config/recipes/template/monit/monitrc.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/config/recipes/templates/monit/nginx.erb" afterPath="$PROJECT_DIR$/config/recipes/template/monit/nginx.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/config/recipes/templates/monit/postgresql.erb" afterPath="$PROJECT_DIR$/config/recipes/template/monit/postgresql.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/config/recipes/templates/monit/unicorn.erb" afterPath="$PROJECT_DIR$/config/recipes/template/monit/unicorn.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/test.rb" afterPath="$PROJECT_DIR$/config/environments/test.rb" />
     </list>
     <ignored path="prototype.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,7 +51,7 @@
         </entry>
       </file>
       <file leaf-file-name="nginx.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/recipes/templates/monit/nginx.erb">
+        <entry file="file://$PROJECT_DIR$/config/recipes/template/monit/nginx.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="4" column="42" selection-start="207" selection-end="207" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
               <folding />
@@ -56,7 +60,7 @@
         </entry>
       </file>
       <file leaf-file-name="postgresql.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/recipes/templates/monit/postgresql.erb">
+        <entry file="file://$PROJECT_DIR$/config/recipes/template/monit/postgresql.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="4" column="42" selection-start="257" selection-end="257" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
               <folding />
@@ -74,7 +78,7 @@
         </entry>
       </file>
       <file leaf-file-name="monitrc.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/recipes/templates/monit/monitrc.erb">
+        <entry file="file://$PROJECT_DIR$/config/recipes/template/monit/monitrc.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="18" column="29" selection-start="395" selection-end="395" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="480">
               <folding />
@@ -83,7 +87,7 @@
         </entry>
       </file>
       <file leaf-file-name="unicorn.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/recipes/templates/monit/unicorn.erb">
+        <entry file="file://$PROJECT_DIR$/config/recipes/template/monit/unicorn.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="240">
               <folding />
@@ -308,7 +312,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -550,14 +554,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2039801" sideWeight="0.6552845" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2039801" sideWeight="0.6552845" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -565,7 +570,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -860,28 +864,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/recipes/templates/monit/unicorn.erb">
+    <entry file="file://$PROJECT_DIR$/config/recipes/template/monit/unicorn.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="955">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/recipes/templates/monit/postgresql.erb">
+    <entry file="file://$PROJECT_DIR$/config/recipes/template/monit/postgresql.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="42" selection-start="257" selection-end="257" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/recipes/templates/monit/nginx.erb">
+    <entry file="file://$PROJECT_DIR$/config/recipes/template/monit/nginx.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="42" selection-start="207" selection-end="207" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/recipes/templates/monit/monitrc.erb">
+    <entry file="file://$PROJECT_DIR$/config/recipes/template/monit/monitrc.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="29" selection-start="395" selection-end="395" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="480">
           <folding />
