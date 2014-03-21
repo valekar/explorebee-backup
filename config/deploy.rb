@@ -13,7 +13,6 @@ load "config/recipes/elasticsearch"
 load "config/recipes/nodejs"
 load "config/recipes/rvm"
 load "config/recipes/carrierwave"
-load ""
 load "config/recipes/check"
 load "config/recipes/monit"
 

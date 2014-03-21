@@ -8,7 +8,8 @@ namespace :postgresql do
   desc "Install PostgreSQL."
   task :install, roles: :db, only: {primary: true} do
     run "#{sudo} apt-get -y update"
-    run "#{sudo} apt-get -y install postgresql libpq-dev"
+    run "#{sudo} apt-get -y install libpq-dev"
+    run "#{sudo} apt-get install -y postgresql postgresql-contrib"
   end
   after "deploy:install", "postgresql:install"
 
