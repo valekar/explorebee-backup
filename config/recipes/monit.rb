@@ -32,7 +32,7 @@ end
 def monit_config(name, destination = nil)
   destination ||= "/etc/monit/conf.d/#{name}.conf"
   template "monit/#{name}.erb", "/tmp/monit_#{name}"
-  run "#{sudo} mkdir /tmp/monit_#{name}"
+  run "#{sudo} touch /tmp/monit_#{name}"
   run "#{sudo} mv /tmp/monit_#{name} #{destination}"
   run "#{sudo} chown root #{destination}"
   run "#{sudo} chmod 600 #{destination}"

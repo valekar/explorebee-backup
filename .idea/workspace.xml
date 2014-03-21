@@ -85,7 +85,7 @@
       <file leaf-file-name="monit.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/recipes/monit.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="31" selection-start="894" selection-end="894" vertical-scroll-proportion="0.5214724" vertical-offset="0" max-vertical-offset="978">
+            <state line="34" column="20" selection-start="883" selection-end="883" vertical-scroll-proportion="0.5214724" vertical-offset="0" max-vertical-offset="978">
               <folding />
             </state>
           </provider>
@@ -923,7 +923,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/recipes/monit.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="31" selection-start="894" selection-end="894" vertical-scroll-proportion="0.5214724" vertical-offset="0" max-vertical-offset="978">
+        <state line="34" column="20" selection-start="883" selection-end="883" vertical-scroll-proportion="0.5214724" vertical-offset="0" max-vertical-offset="978">
           <folding />
         </state>
       </provider>
