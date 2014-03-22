@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
   has_many :post_and_interests
   has_many :interests, :through => :post_and_interests
 
-  belongs_to :user
+  #belongs_to :user
   # this is very important because the the active reputation model depends on this
   default_scope -> { order('created_at DESC') }
   has_many :comments, as: :commentable, dependent: :destroy

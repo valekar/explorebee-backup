@@ -90,36 +90,10 @@ function VoteUrlService($resource){
 
             return service;
         }
-app.factory("flowPlayerService",flowPlayerService);
-flowPlayerService.$inject = [];
-function flowPlayerService(){
-            var service = {
-                flowPlayer:function(){
-                    $f("player", "/flowplayer.swf" ,{
-                        clip:  {
-                            autoPlay: false,
-                            autoBuffering: true
-                        },
-                        plugins: { // load one or more plugins
-                            controls: { // load the controls plugin
 
-                                // always: where to find the Flash object
-                                url: '/flowplayer.controls-tube-3.2.15.swf'
-                                // display properties
-                                ,
-                                tooltips: { // this plugin object exposes a 'tooltips' object
-                                    buttons: true,
-                                    fullscreen: 'Enter Fullscreen mode'
-                                }
-                            }
-                        }
-                    });
-                }
-            };
 
-            return service;
-        }
-        app.factory("ProfilePhotoUploadService",ProfilePhotoUploadService);
+
+app.factory("ProfilePhotoUploadService",ProfilePhotoUploadService);
 
 ProfilePhotoUploadService.$inject = ['$upload','ngProgress'];
 function ProfilePhotoUploadService($upload,ngProgress){
@@ -205,6 +179,20 @@ function CommonVoteService($resource){
                 }
             };
         return service;
+}
+
+
+
+app.factory("VoteService",VoteService);
+VoteService.$inject=['$resource'];
+
+function VoteService($resource){
+    var service = {
+        commonVote:function(){
+            return $resource("/utility/commonVote");
+        }
+    };
+    return service;
 }
 
 app.factory("LargeProfilePhotoService",LargeProfilePhotoService);

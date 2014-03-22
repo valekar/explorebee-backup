@@ -16,7 +16,7 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
         });
     };
 
-    $scope.currentUserId = $window.current_user_id
+    $scope.currentUserId = $window.current_user_id;
 
 
     //**********************************************************************************************************//
@@ -67,19 +67,36 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
     };
 
 
-     $scope.onVoteUp = function(micropost){
+     $scope.onVoteMicropost = function(micropost){
             console.log(micropost);
            var vote = {
                type:"up"
            };
+
          var model = "microposts";
          var id = micropost.micropost.id;
          var Vote = VoteUrlService.vote(model,id);
-
          var voted = Vote.save(vote);
 
          $scope.vote = voted;
 
+/*
+             var type ="up";
+             var model = "microposts";
+             var id = micropost.micropost.id;
+
+             var vote = {
+                 type:type,
+                 model:model,
+                 id:id
+
+             };
+
+
+         //alert("asdasda");
+         var Vote = CommonVoteService.commonVote();
+         var voted = Vote.save(vote);
+         $scope.vote = voted;*/
      };
 
 
@@ -187,9 +204,6 @@ function CentreHomeController($scope,Micropost,PhotoService,VideoUploadService,V
         $scope.videoVote = voted;
 
     };
-
-
-
 
 
     //******************************************************************************************************//

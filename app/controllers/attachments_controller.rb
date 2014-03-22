@@ -84,8 +84,6 @@ class AttachmentsController < ApplicationController
      value = params[:type] == "up"? 1:0
      @video = VideoAttachment.find_by(params[:id])
      @video.add_or_update_evaluation(:votes,value,current_user)
-
-     p "vooooottttttesss"
      p @video.reputation_for(:votes).to_i
 
 

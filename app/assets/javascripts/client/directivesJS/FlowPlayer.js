@@ -4,13 +4,14 @@ flow.$inject = [];
 function flow(){
     return {
 
-
         link:function(scope, element, attrs) {
             return scope.$watch('showcast', function(url) {
                 if (url) {
                     return element.flowplayer({
                         playlist: [
+
                             [
+
                                 {
                                     mp4: url
                                 }
@@ -28,6 +29,9 @@ function flow(){
             $scope.showcast = null;
             $scope.showVideo=function(url){
                 $scope.showcast = url
+
+
+
             }
         }]
 
