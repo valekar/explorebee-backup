@@ -10,7 +10,7 @@ end
 namespace :deploy do
   task :install do
     run "#{sudo} apt-get -y update"
-    run "#{sudo} apt-get -y python-software-properties"
-    run "#{sudo} apt-get -y software-properties-common"
+    run "echo | #{sudo} apt-get -y install python-software-properties"
+    run "echo | #{sudo} apt-get -y install software-properties-common"
   end
 end

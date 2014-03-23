@@ -16,6 +16,6 @@ namespace :swap_area do
     run "#{sudo} chmod 0600 /swapfile"
   end
 
-  after "deploy:setup", "swap_area:setup"
+  #after "deploy:setup", "swap_area:setup"
 
 end

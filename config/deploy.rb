@@ -22,8 +22,8 @@ server "107.170.58.44", :web, :app, :db, primary: true
 
 set :application, "explorebee"
 set :postgres_name, "explorebee"
-set :unicorn_name,"explorebeeme"
-set :nginx_name, "explorebeeme"
+set :unicorn_name,"explorebee"
+set :nginx_name, "explorebee"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache

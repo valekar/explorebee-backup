@@ -8,8 +8,8 @@ namespace :postgresql do
   desc "Install PostgreSQL."
   task :install, roles: :db, only: {primary: true} do
     run "#{sudo} apt-get -y update"
-    run "#{sudo} apt-get -y install libpq-dev"
-    run "#{sudo} apt-get install -y postgresql postgresql-contrib"
+    run "echo | #{sudo} apt-get -y install libpq-dev"
+    run "echo | #{sudo} apt-get install -y postgresql postgresql-contrib"
   end
   after "deploy:install", "postgresql:install"
 
@@ -18,7 +18,7 @@ namespace :postgresql do
     run %Q{#{sudo} -u postgres psql -c "create user #{postgresql_user} with password '#{postgresql_password}';"}
     run %Q{#{sudo} -u postgres psql -c "create database #{postgresql_database} owner #{postgresql_user};"}
   end
-  after "deploy:setup", "postgresql:create_database"
+ # after "deploy:setup", "postgresql:create_database"
 
   desc "Generate the database.yml configuration file."
   task :setup, roles: :app do
