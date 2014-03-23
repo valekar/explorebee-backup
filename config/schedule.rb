@@ -22,7 +22,7 @@
 
 
 
-every 1.minute do
+every 1.day do
   #runner "MyModel.some_process"
 
   #command "/usr/bin/my_great_command"
