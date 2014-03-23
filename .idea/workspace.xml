@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8766b72-7525-427e-91d5-c240c06bca6b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/development.sqlite3" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/schema.rb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-8546750cf9f6fb185973527de7912217.js" afterPath="" />
@@ -10,6 +11,10 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-dc640eaf024f865d0e42a2cd277d6ca0.js.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-e454a27092ff6429f48992073c565ff2.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-e454a27092ff6429f48992073c565ff2.js.gz" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/recipes/other.rb" afterPath="$PROJECT_DIR$/config/recipes/other.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/prototype.iml" afterPath="$PROJECT_DIR$/.idea/prototype.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototype.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,7 +89,7 @@
       <file leaf-file-name="other.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/recipes/other.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+            <state line="1" column="1" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
               <folding />
             </state>
           </provider>
@@ -93,7 +98,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="0" selection-start="2323" selection-end="2323" vertical-scroll-proportion="0.62401056" vertical-offset="1087" max-vertical-offset="1845">
+            <state line="96" column="1" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.42612138" vertical-offset="1117" max-vertical-offset="1875">
               <folding />
             </state>
           </provider>
@@ -973,14 +978,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/recipes/other.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+        <state line="1" column="1" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="0" selection-start="2323" selection-end="2323" vertical-scroll-proportion="0.62401056" vertical-offset="1087" max-vertical-offset="1845">
+        <state line="96" column="1" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.42612138" vertical-offset="1117" max-vertical-offset="1875">
           <folding />
         </state>
       </provider>

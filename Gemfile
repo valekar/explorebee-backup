@@ -20,6 +20,7 @@ gem 'gon'
 #gem 'compass'
 #gem 'zurb-foundation'
 gem "remotipart", "~> 1.0"
+gem 'coffee-rails', '~> 4.0.0'
 
 #masonry and isoope included
 gem 'masonry-rails' ,"~> 0.2.1"
@@ -42,6 +43,7 @@ gem 'omniauth-linkedin'
 
 #authorization
 gem 'cancan'
+
 gem 'sprockets', '2.11.0'
 gem 'rmagick'
 gem 'carrierwave'
@@ -92,7 +94,7 @@ end
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '2.1.1'
-gem 'coffee-rails', '4.0.0'
+#gem 'coffee-rails', '4.0.0'
 gem 'jquery-rails', '2.2.1'
 #gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'

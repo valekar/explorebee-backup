@@ -1,7 +1,7 @@
-=begin
-set :whenever_command, "bundle exec whenever"
+
+#set :whenever_command, "bundle exec whenever"
 require "whenever/capistrano"
-=end
+
 
 namespace :other do
   task :sidekick do
