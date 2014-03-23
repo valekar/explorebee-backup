@@ -6,6 +6,7 @@ $redis = Redis.new(:host => uri.host, :port => .port, :password => uri.password)
 
 =end
 
+=begin
 
 require "redis"
 
@@ -18,3 +19,8 @@ def r
   end
   $redis
 end
+
+=end
+
+
+$redis ||= Redis.new
