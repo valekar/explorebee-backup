@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8766b72-7525-427e-91d5-c240c06bca6b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/development.sqlite3" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/schema.rb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-8546750cf9f6fb185973527de7912217.js" afterPath="" />
@@ -11,6 +10,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-dc640eaf024f865d0e42a2cd277d6ca0.js.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-e454a27092ff6429f48992073c565ff2.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-e454a27092ff6429f48992073c565ff2.js.gz" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/recipes/other.rb" afterPath="$PROJECT_DIR$/config/recipes/other.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/prototype.iml" afterPath="$PROJECT_DIR$/.idea/prototype.iml" />
@@ -86,19 +86,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="other.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="other.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/recipes/other.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="1" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+            <state line="3" column="0" selection-start="77" selection-end="77" vertical-scroll-proportion="0.059366755" vertical-offset="0" max-vertical-offset="758">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="1" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.42612138" vertical-offset="1117" max-vertical-offset="1875">
+            <state line="100" column="13" selection-start="2310" selection-end="2310" vertical-scroll-proportion="0.0" vertical-offset="1027" max-vertical-offset="1890">
               <folding />
             </state>
           </provider>
@@ -189,8 +189,8 @@
         <option value="$PROJECT_DIR$/config/initializers/redis.rb" />
         <option value="$PROJECT_DIR$/config/schedule.rb" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
-        <option value="$PROJECT_DIR$/config/recipes/other.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/recipes/other.rb" />
       </list>
     </option>
   </component>
@@ -927,27 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/recipes/templates/monit/elasticsearch.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="31" selection-start="99" selection-end="99" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="135">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/recipes/carrierwave.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="55" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/recipes/redis.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="29" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/redis.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="0" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
@@ -962,13 +941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/search_suggestions.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="29" selection-start="11" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="1" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1035">
@@ -976,16 +948,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/recipes/other.rb">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="1" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+        <state line="100" column="13" selection-start="2310" selection-end="2310" vertical-scroll-proportion="0.0" vertical-offset="1027" max-vertical-offset="1890">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/config/recipes/carrierwave.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="1" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.42612138" vertical-offset="1117" max-vertical-offset="1875">
+        <state line="13" column="55" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/recipes/templates/monit/elasticsearch.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="31" selection-start="99" selection-end="99" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="135">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/search_suggestions.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="29" selection-start="11" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/recipes/redis.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="29" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/recipes/other.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="77" selection-end="77" vertical-scroll-proportion="0.059366755" vertical-offset="0" max-vertical-offset="758">
           <folding />
         </state>
       </provider>
