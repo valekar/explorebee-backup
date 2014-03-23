@@ -27,6 +27,10 @@ set :nginx_name, "explorebee"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
+
+set :whenever_command, "bundle exec whenever"
+require "whenever/capistrano"
+
 #set :bundle_gemfile, "app/Gemfile"
 #set :deploy_via, :copy
 set :use_sudo, false
