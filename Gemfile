@@ -52,7 +52,7 @@ gem 'protected_attributes'
 gem 'dalli'
 gem 'activerecord-reputation-system',:require => "reputation_system"
 gem 'foundation-icons-sass-rails', github: 'zaiste/foundation-icons-sass-rails'
-gem 'whenever', :require => false
+#gem 'whenever', :require => false
 
 group :development, :test do
   gem 'sqlite3', '1.3.7'
