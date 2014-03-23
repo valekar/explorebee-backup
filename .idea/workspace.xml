@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8766b72-7525-427e-91d5-c240c06bca6b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/recipes/templates/monit/redis-server.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/recipes/templates/monit/redis.erb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/development.sqlite3" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/schema.rb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-8546750cf9f6fb185973527de7912217.js" afterPath="" />
@@ -12,14 +10,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-dc640eaf024f865d0e42a2cd277d6ca0.js.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-e454a27092ff6429f48992073c565ff2.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-e454a27092ff6429f48992073c565ff2.js.gz" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/recipes/monit.rb" afterPath="$PROJECT_DIR$/config/recipes/monit.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/prototype.iml" afterPath="$PROJECT_DIR$/.idea/prototype.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/redis.rb" afterPath="$PROJECT_DIR$/config/initializers/redis.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/recipes/other.rb" afterPath="$PROJECT_DIR$/config/recipes/other.rb" />
     </list>
     <ignored path="prototype.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,19 +110,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="other.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="other.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/recipes/other.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="3" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+            <state line="12" column="22" selection-start="221" selection-end="221" vertical-scroll-proportion="0.23746702" vertical-offset="0" max-vertical-offset="758">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="redis.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="redis.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/initializers/redis.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="3" selection-start="357" selection-end="357" vertical-scroll-proportion="0.37598944" vertical-offset="0" max-vertical-offset="758">
+            <state line="19" column="3" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
               <folding />
             </state>
           </provider>
@@ -201,10 +193,10 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/schedule.rb" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
-        <option value="$PROJECT_DIR$/config/recipes/other.rb" />
         <option value="$PROJECT_DIR$/config/recipes/templates/monit/redis_6379.erb" />
         <option value="$PROJECT_DIR$/config/recipes/monit.rb" />
         <option value="$PROJECT_DIR$/config/initializers/redis.rb" />
+        <option value="$PROJECT_DIR$/config/recipes/other.rb" />
       </list>
     </option>
   </component>
@@ -958,13 +950,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/recipes/redis.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="29" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="0" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1035">
@@ -993,16 +978,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/recipes/other.rb">
+    <entry file="file://$PROJECT_DIR$/config/initializers/redis.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="3" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+        <state line="19" column="3" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/redis.rb">
+    <entry file="file://$PROJECT_DIR$/config/recipes/redis.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="3" selection-start="357" selection-end="357" vertical-scroll-proportion="0.37598944" vertical-offset="0" max-vertical-offset="758">
+        <state line="14" column="29" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/recipes/other.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="22" selection-start="221" selection-end="221" vertical-scroll-proportion="0.23746702" vertical-offset="0" max-vertical-offset="758">
           <folding />
         </state>
       </provider>

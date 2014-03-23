@@ -6,3 +6,10 @@ namespace :other do
     run "bundle exec sidekiq"
   end
 end
+
+
+namespace :patron do
+  task :install do
+    run "echo | #{sudo} apt-get install libcurl3-deV"
+  end
+end
