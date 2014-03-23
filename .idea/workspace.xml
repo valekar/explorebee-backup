@@ -10,8 +10,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-dc640eaf024f865d0e42a2cd277d6ca0.js.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-e454a27092ff6429f48992073c565ff2.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-e454a27092ff6429f48992073c565ff2.js.gz" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/recipes/templates/monit/elasticsearch.erb" afterPath="$PROJECT_DIR$/config/recipes/templates/monit/elasticsearch.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/recipes/templates/monit/redis.erb" afterPath="$PROJECT_DIR$/config/recipes/templates/monit/redis.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/recipes/monit.rb" afterPath="$PROJECT_DIR$/config/recipes/monit.rb" />
     </list>
     <ignored path="prototype.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,7 +58,7 @@
       <file leaf-file-name="redis.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/recipes/templates/monit/redis.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="150">
+            <state line="4" column="28" selection-start="213" selection-end="213" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
               <folding />
             </state>
           </provider>
@@ -83,19 +82,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="monit.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="monit.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/recipes/monit.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="50" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+            <state line="23" column="21" selection-start="568" selection-end="568" vertical-scroll-proportion="0.36125654" vertical-offset="0" max-vertical-offset="955">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="elasticsearch.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="elasticsearch.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/recipes/templates/monit/elasticsearch.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="931">
+            <state line="0" column="46" selection-start="46" selection-end="46" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="150">
               <folding />
             </state>
           </provider>
@@ -176,9 +175,9 @@
         <option value="$PROJECT_DIR$/config/recipes/nginx.rb" />
         <option value="$PROJECT_DIR$/config/recipes/postgresql.rb" />
         <option value="$PROJECT_DIR$/lib/tasks/search_suggestions.rake" />
-        <option value="$PROJECT_DIR$/config/recipes/monit.rb" />
         <option value="$PROJECT_DIR$/config/recipes/templates/monit/redis.erb" />
         <option value="$PROJECT_DIR$/config/recipes/templates/monit/elasticsearch.erb" />
+        <option value="$PROJECT_DIR$/config/recipes/monit.rb" />
       </list>
     </option>
   </component>
@@ -911,13 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/recipes/monit.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="50" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/recipes/templates/monit/nginx.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="26" selection-start="191" selection-end="191" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
@@ -939,16 +931,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/recipes/templates/monit/redis.erb">
+    <entry file="file://$PROJECT_DIR$/config/recipes/templates/monit/elasticsearch.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="931">
+        <state line="0" column="46" selection-start="46" selection-end="46" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="150">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/recipes/templates/monit/elasticsearch.erb">
+    <entry file="file://$PROJECT_DIR$/config/recipes/templates/monit/redis.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="931">
+        <state line="4" column="28" selection-start="213" selection-end="213" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/recipes/monit.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="21" selection-start="568" selection-end="568" vertical-scroll-proportion="0.36125654" vertical-offset="0" max-vertical-offset="955">
           <folding />
         </state>
       </provider>
