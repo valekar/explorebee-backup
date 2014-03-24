@@ -23,6 +23,6 @@
 
 every 1.minute do
   rake "searchkick:reindex CLASS=Place"
-  rake "searchkick:reindex CLASS=User"
+  #rake "searchkick:reindex CLASS=User"
   rake "search_suggestions:reindex"
 end
