@@ -20,8 +20,8 @@ namespace :monit do
 
   task(:nginx, roles: :web) { monit_config "nginx" }
   task(:postgresql, roles: :db) { monit_config "postgresql" }
-  task(:redis, roles: :db) { monit_config "redis_6379" }
-  task(:elasticsearch, roles: :app) { monit_config "elasticsearch" }
+  #task(:redis, roles: :db) { monit_config "redis_6379" }
+  #task(:elasticsearch, roles: :app) { monit_config "elasticsearch" }
   task(:unicorn, roles: :app) { monit_config "unicorn" }
 
   %w[start stop restart syntax reload].each do |command|
