@@ -2,10 +2,10 @@
 <ul class="title-area">
   <!-- Title Area -->
   <li class="name">
-    <h1><%= link_to "ExploreBee", root_url  %></h1>
+    <h1><%= link_to "ExploreBeeME", root_path  %></h1>
   </li>
   <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-  <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  <li class="toggle-topbar menu-icon"><a href="#"><span>Menus</span></a></li>
 </ul>
 
 <section class="top-bar-section">
@@ -89,16 +89,20 @@
       <ul class="row">
         <%= form_for(:session, url: sessions_path) do |f| %>
 
-            <div class="large-2 columns push-4">
+            <div class="large-2 columns right" >
+              <li><%= f.submit 'Sign in', class: " button radius" %></li>
+            </div>
+
+            <div class="large-2 columns right">
+              <li><%= f.password_field :password,placeholder:"Password"%></li>
+            </div>
+
+            <div class="large-2 columns right">
                 <li><%= f.text_field :email, placeholder:"Email" ,class:"radius" %> </li>
             </div>
-          <div class="large-2 columns push-4">
-            <li><%= f.password_field :password,placeholder:"Password"%></li>
-          </div>
 
-          <div class="large-2 columns">
-            <li><%= f.submit 'Sign in', class: " button radius" %></li>
-          </div>
+
+
 
 
 

@@ -111,6 +111,7 @@ group :production do
   gem 'pg', '0.17.1'
   gem 'rails_12factor', '0.0.2'
   gem 'unicorn'
+  gem 'unicorn-worker-killer'
   gem "net-ssh", "~> 2.7.0"
   gem 'capistrano'
   gem 'actionpack','4.0.0'
